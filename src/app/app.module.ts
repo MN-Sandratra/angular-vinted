@@ -9,6 +9,7 @@ import { BottomNavbarComponent } from './components/bottom-navbar/bottom-navbar.
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { ContentSectionComponent } from './components/content-section/content-section.component';
 import { SectionArticleComponent } from './components/section-article/section-article.component';
+import { SearchTagComponent } from './components/search-tag/search-tag.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SectionArticleComponent } from './components/section-article/section-ar
     BottomNavbarComponent,
     MainContentComponent,
     ContentSectionComponent,
-    SectionArticleComponent
+    SectionArticleComponent,
+    SearchTagComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,8 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { ContentSectionComponent } from './components/content-section/content-section.component';
 import { SectionArticleComponent } from './components/section-article/section-article.component';
 import { SearchTagComponent } from './components/search-tag/search-tag.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CarousselArticlesComponent } from './components/caroussel-articles/caroussel-articles.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SearchTagComponent } from './components/search-tag/search-tag.component
     MainContentComponent,
     ContentSectionComponent,
     SectionArticleComponent,
-    SearchTagComponent
+    SearchTagComponent,
+    FooterComponent,
+    CarousselArticlesComponent
   ],
   imports: [
     BrowserModule,

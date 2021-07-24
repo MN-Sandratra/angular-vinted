@@ -1,6 +1,7 @@
 <div class="d-flex flex-row justify-content-between">
-    <h4>Articles populaires</h4>
-    <a href="#" class="d-flex align-items-center" style="text-decoration: none;color: #09B1BA;">Voir tout</a>
+    <h4>{{ title }}</h4>
+    <a *ngIf="extraLink" href="#" class="d-flex align-items-center" style="text-decoration: none;color: #09B1BA;">{{ extraLink }}</a>
 </div>
-<app-section-article></app-section-article>
-<app-search-tag></app-search-tag>
+<div class="d-flex flex-row">
+    <ng-content></ng-content>
+</div>

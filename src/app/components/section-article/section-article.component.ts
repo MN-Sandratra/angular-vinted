@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-section-article',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./section-article.component.scss']
 })
 export class SectionArticleComponent implements OnInit {
+  @Input() showUser!: boolean;
 
   constructor() { }
 

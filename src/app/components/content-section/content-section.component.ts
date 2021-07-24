@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-content-section',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-section.component.scss']
 })
 export class ContentSectionComponent implements OnInit {
+  @Input() title!: string;
+  @Input() extraLink!: string;
 
   constructor() { }
 

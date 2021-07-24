@@ -1,3 +1,19 @@
 <div style="margin-top: 10%;" class="container-fluid">
-    <app-content-section></app-content-section>
+    <app-content-section [title] = "'Articles Populaires'" [extraLink] = "'Voir Tout'">
+        <app-section-article *ngFor="let article of articles"></app-section-article>
+    </app-content-section>
+    <app-content-section [title] = "'Rechercher par marque'">
+        <app-search-tag *ngFor="let article of articles"></app-search-tag>
+    </app-content-section>
+    <app-content-section [title] = "'Suggestions de recherche'">
+        <app-search-tag *ngFor="let article of articles"></app-search-tag>
+    </app-content-section>
+    <app-content-section [title] = "'Fil d\'actu'">
+        <app-section-article *ngFor="let article of articles" [showUser] = "true"></app-section-article>
+    </app-content-section>
+    <app-content-section [title] = "'Dressings en Vitrine'" [extraLink] = "'Voir plus'">
+        <app-caroussel-articles>
+            <app-section-article *ngFor="let article of articles"></app-section-article>        
+        </app-caroussel-articles>
+    </app-content-section>
 </div>

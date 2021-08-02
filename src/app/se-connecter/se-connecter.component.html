@@ -1,0 +1,28 @@
+<div class="container-fluid box-signup ms-auto me-auto text-center">
+    <h1 class="text-center">Se connecter</h1>
+    <form class="row" (ngSubmit)="onSubmit()" [formGroup]="myform">
+        <mat-form-field appearance="legacy" floatLabel="never" class="mb-3">
+            <mat-label>Identifiant ou adresse email</mat-label>
+            <input matInput (focus)="hide_hint = !hide_hint" (blur)="hide_hint = !hide_hint" required
+                [formControl]="user">
+            <mat-hint [hidden]="hide_hint">Crée ton nom d'utilisateur en n'utilisant que des lettres et des chiffres.
+                Choisis-en un qui te plaît, tu ne pourras plus le changer.
+            </mat-hint>
+            <mat-error *ngIf="user.invalid">{{getUserMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="legacy" floatLabel="never" class="mb-3">
+            <mat-label>Mot de passe</mat-label>
+            <input matInput minlength="7" [type]="hide ? 'password' : 'text'" required [formControl]="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="password.invalid">{{getPasswordError()}}</mat-error>
+        </mat-form-field>
+
+        <button type="submit" class="btn btn-info sign">Se connecter</button>
+    </form>
+    <p class="lien-terme mt-3 mb-3">Mot de passe oublié</p>
+    <p class="lien-terme">Besoin d'aide ?</p>
+    <p></p>
+</div>

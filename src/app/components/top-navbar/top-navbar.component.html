@@ -1,47 +1,49 @@
 <nav class="navbar navbar-expand-lg navbar-light border-bottom">
     <div class="container d-flex flex-row w-100">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand ms-5 " href="#">
            <img src="/assets/images/logo-vinted.png" alt="" style="max-width:80px ;">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item" >
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle border-end" href="#" id="Articles" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Articles
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="Articles">
-                            <li><a class="dropdown-item" href="#">Articles</a></li>
-                            <li><a class="dropdown-item" href="#">Membres</a></li>
-                            <li><a class="dropdown-item" href="#">Forum</a></li>
-                            <li><a class="dropdown-item" href="#">Centre d'aide</a></li>
-                        </ul>
-                    </li>
-                    <form class="d-flex">
-                        <img src="/assets/images/search_24px.png" alt="" style="max-width: 24px;max-height: 24px; margin-top: 5%;">
-                        <input class="form-control me-2" type="search" placeholder="Rechercher des articles" aria-label="Search">
-                    </form>
+            <ul class="navbar-nav w-100">
+                <li class="nav-item w-50" >
+                    <div class="d-flex flex-row ms-5">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle border-end" href="#" id="Articles" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Articles
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="Articles">
+                                <li><a class="dropdown-item" href="#">Articles</a></li>
+                                <li><a class="dropdown-item" href="#">Membres</a></li>
+                                <li><a class="dropdown-item" href="#">Forum</a></li>
+                                <li><a class="dropdown-item" href="#">Centre d'aide</a></li>
+                            </ul>
+                        </li>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Rechercher des articles" aria-label="Search">
+                        </form>
+                    </div>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <img src="/assets/images/new_post_50px.png" alt="">
+                        <fa-icon [icon]="['far','envelope']" size="lg"></fa-icon>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <img src="/assets/images/notification_24px.png" alt="">
+                        <fa-icon [icon]="['far','bell']" size="lg"></fa-icon>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <img src="/assets/images/heart_24px.png" alt="">
+                        <fa-icon [icon]="['far','heart']" size="lg"></fa-icon>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="compte" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="/assets/images/account_24px.png" alt="">
+                        <fa-icon [icon]="['far','user']" size="lg"></fa-icon>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="compte">
                         <li class="dropdown-header muted" style="font-size: 10px;">MON COMPTE </li>
@@ -58,7 +60,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <img src="/assets/images/help_24px.png" alt="">
+                        <fa-icon [icon]="['far','question-circle']" size="lg"></fa-icon>
                     </a>
                 </li>
                 <li class="nav-item dropdown">

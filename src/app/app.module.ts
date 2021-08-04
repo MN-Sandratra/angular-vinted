@@ -12,6 +12,10 @@ import { SectionArticleComponent } from './components/section-article/section-ar
 import { SearchTagComponent } from './components/search-tag/search-tag.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarousselArticlesComponent } from './components/caroussel-articles/caroussel-articles.component';
+import { FontAwesomeModule,FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
 
 @NgModule({
   declarations: [
@@ -28,9 +32,14 @@ import { CarousselArticlesComponent } from './components/caroussel-articles/caro
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(library:FaIconLibrary){
+    library.addIconPacks(fas,far);
+  }
+}

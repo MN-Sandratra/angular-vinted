@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule,routingComponents  } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
@@ -16,6 +16,9 @@ import { FontAwesomeModule,FaIconLibrary } from '@fortawesome/angular-fontawesom
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import { NewItemContentComponent } from './components/new-item-content/new-item-content.component';
+import { NewItemAddPhotosComponent } from './components/new-item-add-photos/new-item-add-photos.component';
+import { NewItemDescriptionsComponent } from './components/new-item-descriptions/new-item-descriptions.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,11 @@ import { far } from '@fortawesome/free-regular-svg-icons';
     SectionArticleComponent,
     SearchTagComponent,
     FooterComponent,
-    CarousselArticlesComponent
+    CarousselArticlesComponent,
+    routingComponents,
+    NewItemContentComponent,
+    NewItemAddPhotosComponent,
+    NewItemDescriptionsComponent
   ],
   imports: [
     BrowserModule,

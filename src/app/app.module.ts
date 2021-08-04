@@ -12,6 +12,7 @@ import { SectionArticleComponent } from './components/section-article/section-ar
 import { SearchTagComponent } from './components/search-tag/search-tag.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarousselArticlesComponent } from './components/caroussel-articles/caroussel-articles.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CarousselArticlesComponent } from './components/caroussel-articles/caro
     SectionArticleComponent,
     SearchTagComponent,
     FooterComponent,
-    CarousselArticlesComponent
+    CarousselArticlesComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

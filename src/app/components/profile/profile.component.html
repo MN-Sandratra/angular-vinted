@@ -1,1 +1,83 @@
-<p>profile works!</p>
+<div class="profile container-fluid d-flex flex-column">
+    <div class="profile_header d-flex">
+        <div class="profile_picture">
+            <img src="https://via.placeholder.com/250" alt="" srcset="" />
+        </div>
+        <div class="profile_description container d-flex flex-column">
+            <div class="d-flex justify-content-between">
+                <div class="profile_overview">
+                    <div class="profile_username">
+                         profile.username 
+                    </div>
+                    <div class="profile_reviews">
+                        <span class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon-small">
+                                <path d="M23.04,9h-8.27L12,1L9.23,9L0.96,9.021l6.559,5.043L5.177,22L12,17.321L18.823,22l-2.342-7.935L23.04,9z" fill="#9f9f9f" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon-small">
+                                <path d="M23.04,9h-8.27L12,1L9.23,9L0.96,9.021l6.559,5.043L5.177,22L12,17.321L18.823,22l-2.342-7.935L23.04,9z" fill="#9f9f9f" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon-small">
+                                <path d="M23.04,9h-8.27L12,1L9.23,9L0.96,9.021l6.559,5.043L5.177,22L12,17.321L18.823,22l-2.342-7.935L23.04,9z" fill="#9f9f9f" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon-small">
+                                <path d="M23.04,9h-8.27L12,1L9.23,9L0.96,9.021l6.559,5.043L5.177,22L12,17.321L18.823,22l-2.342-7.935L23.04,9z" fill="#9f9f9f" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon-small">
+                                <path d="M23.04,9h-8.27L12,1L9.23,9L0.96,9.021l6.559,5.043L5.177,22L12,17.321L18.823,22l-2.342-7.935L23.04,9z" fill="#9f9f9f" />
+                            </svg>
+                        </span>
+                        <span>
+                             profile.reviews.getNumber() 
+                        </span>
+                    </div>
+                </div>
+                <div class="profile_buttons">
+                    <button class="btn btn-outline-primary">Contacter</button>
+                    <button class="btn btn-primary mx-3">Suivre</button>
+                    <button class="btn btn-sm " data-bs-toggle="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
+                            <path d="M6 10 A 2 2 0 0 0 4 12 A 2 2 0 0 0 6 14 A 2 2 0 0 0 8 12 A 2 2 0 0 0 6 10 z M 12 10 A 2 2 0 0 0 10 12 A 2 2 0 0 0 12 14 A 2 2 0 0 0 14 12 A 2 2 0 0 0 12 10 z M 18 10 A 2 2 0 0 0 16 12 A 2 2 0 0 0 18 14 A 2 2 0 0 0 20 12 A 2 2 0 0 0 18 10 z" fill="#9f9f9f" />
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Signaler le membre</a></li>
+                        <li><a class="dropdown-item" href="#">Bloquer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex mt-5">
+                <div class="profile_about me-5">
+                    <p class="text-muted fs-6">A propos :</p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
+                            <path d="M12 1C8.686 1 6 3.686 6 7C6 11.286 12 18 12 18C12 18 18 11.286 18 7C18 3.686 15.314 1 12 1 z M 12 4.8574219C13.184 4.8574219 14.142578 5.816 14.142578 7C14.142578 8.183 13.183 9.1425781 12 9.1425781C10.817 9.1425781 9.8574219 8.184 9.8574219 7C9.8574219 5.816 10.816 4.8574219 12 4.8574219 z M 4.8007812 15L2 22L22 22L19.199219 15L16.8125 15C16.3275 15.731 15.840578 16.408 15.392578 17L17.847656 17L19.046875 20L4.953125 20L6.1523438 17L8.6074219 17C8.1594219 16.408 7.6725 15.731 7.1875 15L4.8007812 15 z" fill="#D8D8D8" />
+                        </svg>
+                        <span> profile.location.city ,  profile.location.country </span>
+                    </p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
+                            <path d="M12 2C6.486 2 2 6.486 2 12C2 17.228 6.0333906 21.524031 11.150391 21.957031C11.250391 21.594031 11.408328 21.251734 11.611328 20.927734C11.748328 20.710734 11.912797 20.504641 12.091797 20.306641C12.161797 20.229641 12.234547 20.155031 12.310547 20.082031C13.014547 19.395031 13.967906 18.840422 15.128906 18.482422C14.431906 17.691422 14 16.66 14 15.5C14 12.977 15.977 11 18.5 11C19.016 11 19.503938 11.090141 19.960938 11.244141C19.960938 11.247141 19.962891 11.252859 19.962891 11.255859C20.762891 11.523859 21.44775 12.001766 21.96875 12.634766C21.98175 12.423766 22 12.214 22 12C22 6.486 17.514 2 12 2 z M 11 6L13 6L13 12.414062L8.7070312 16.707031L7.2929688 15.292969L11 11.585938L11 6 z M 18.5 13 A 2.5 2.5 0 0 0 16 15.5 A 2.5 2.5 0 0 0 18.5 18 A 2.5 2.5 0 0 0 21 15.5 A 2.5 2.5 0 0 0 18.5 13 z M 18.5 20C15.496 20 13 21.211031 13 22.957031L13 24L24 24L24 22.957031C24 21.211031 21.504 20 18.5 20 z" fill="#D8D8D8" />
+                        </svg>
+                        <span>Connecté il y a  profile.getConnectionTimestamp() </span>
+                    </p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
+                            <path d="M5 3C4.7255584 3 4.464854 3.0577836 4.2265625 3.1582031C3.7454353 3.3609573 3.3609573 3.7454353 3.1582031 4.2265625C3.1082327 4.3451402 3.0674441 4.4688029 3.0410156 4.5976562C3.0408867 4.5982727 3.041144 4.5989927 3.0410156 4.5996094C3.0145833 4.7291159 3 4.8627874 3 5L3 19C3 19.136633 3.0140817 19.270982 3.0410156 19.400391C3.0411432 19.401016 3.0408874 19.401719 3.0410156 19.402344C3.0679423 19.531095 3.1073942 19.654638 3.1582031 19.773438C3.3609573 20.254565 3.7454353 20.639043 4.2265625 20.841797C4.3451402 20.891767 4.4688029 20.932556 4.5976562 20.958984C4.5982727 20.959113 4.5989927 20.958856 4.5996094 20.958984C4.7291159 20.985417 4.8627874 21 5 21L19 21C19.273266 21 19.5347 20.943901 19.773438 20.841797C20.254565 20.639043 20.639043 20.254565 20.841797 19.773438C20.943901 19.5347 21 19.273266 21 19L21 5C21 4.7267343 20.943901 4.4652998 20.841797 4.2265625C20.639043 3.7454353 20.254565 3.3609573 19.773438 3.1582031C19.654638 3.1073942 19.531095 3.0679423 19.402344 3.0410156C19.401719 3.0408874 19.401016 3.0411432 19.400391 3.0410156C19.270982 3.0140817 19.136633 3 19 3L5 3 z M 6 6L7 6C13.065 6 18 10.935 18 17L18 18L16 18L16 17C16 12.037 11.963 8 7 8L6 8L6 6 z M 6 10L7 10C10.859 10 14 13.141 14 17L14 18L12 18L12 17C12 14.243 9.757 12 7 12L6 12L6 10 z M 7.5 15C8.328 15 9 15.672 9 16.5C9 17.328 8.328 18 7.5 18C6.672 18 6 17.328 6 16.5C6 15.672 6.672 15 7.5 15 z" fill="#D8D8D8" />
+                        </svg>
+                        <span> profile.getSubscriberNumber()  abonnés,  profile.getSubscriptionNumber() </span>
+                    </p>
+                </div>
+                <div class="profile_credential-check">
+                    <p class="text-muted fs-6">Informations vérifiées :</p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
+                            <path d="M12,2C6.477,2,2,6.477,2,12c0,5.523,4.477,10,10,10s10-4.477,10-10C22,6.477,17.523,2,12,2z M10,17.414l-4.707-4.707 l1.414-1.414L10,14.586l7.293-7.293l1.414,1.414L10,17.414z" fill="#D8D8D8" />
+                        </svg>
+                        <span>Email</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>

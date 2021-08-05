@@ -13,6 +13,7 @@ import { SearchTagComponent } from './components/search-tag/search-tag.component
 import { FooterComponent } from './components/footer/footer.component';
 import { CarousselArticlesComponent } from './components/caroussel-articles/caroussel-articles.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { TabsComponent } from './components/tabs/tabs.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     SearchTagComponent,
     FooterComponent,
     CarousselArticlesComponent,
-    ProfileComponent
+    ProfileComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,93 @@
+<div class="profile_tabs mt-5">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Dressing</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Evaluations</a>
+        </li>
+    </ul>
+</div>
+
+<div class="articles container-fluid d-flex">
+    <div class="articles_header container-fluid d-flex justify-content-between mt-3">
+        <div>
+             profile.getArticlesNumber()  articles
+        </div>
+        <div class="filters d-flex flex-row align-items-center">
+            <div class="d-flex align-items-center">
+                <span>Catégorie</span>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle text-muted" type="button" id="filters_category" data-bs-toggle="dropdown" aria-expanded="false">
+                      Tous
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="filters_category">
+                        <li><a class="dropdown-item" href="#">Tous</a></li>
+                        <li><a class="dropdown-item" href="#">Homme</a></li>
+                        <li><a class="dropdown-item" href="#">Femme</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <span class="align-middle">Trier par</span>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle text-muted" type="button" id="filters_sort" data-bs-toggle="dropdown" aria-expanded="false">
+                      Pertinence
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="filters_sort">
+                        <li><a class="dropdown-item" href="#">Pertinence</a></li>
+                        <li><a class="dropdown-item" href="#">Prix Décroissant</a></li>
+                        <li><a class="dropdown-item" href="#">Prix Croissant</a></li>
+                        <li><a class="dropdown-item" href="#">Le plus récent</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------------------- -->
+
+<div class="reviews container-fluid d-flex">
+    <div class="review d-flex my-4">
+        <div class="review_profile-picture me-3">
+            <img class="rounded-circle" src="https://via.placeholder.com/50">
+        </div>
+        <div class="review_main">
+            <div class="review_header d-flex justify-content-between">
+                <div class="review_username"> review.user.username </div>
+                <div class="review_date text-muted"> review.getTimestamp() </div>
+            </div>
+            <div class="review_content d-flex flex-column align-items-start">
+                <div class="review_rating">
+                    <span class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon-small">
+                            <path d="M23.04,9h-8.27L12,1L9.23,9L0.96,9.021l6.559,5.043L5.177,22L12,17.321L18.823,22l-2.342-7.935L23.04,9z" fill="#9f9f9f" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon-small">
+                            <path d="M23.04,9h-8.27L12,1L9.23,9L0.96,9.021l6.559,5.043L5.177,22L12,17.321L18.823,22l-2.342-7.935L23.04,9z" fill="#9f9f9f" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon-small">
+                            <path d="M23.04,9h-8.27L12,1L9.23,9L0.96,9.021l6.559,5.043L5.177,22L12,17.321L18.823,22l-2.342-7.935L23.04,9z" fill="#9f9f9f" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon-small">
+                            <path d="M23.04,9h-8.27L12,1L9.23,9L0.96,9.021l6.559,5.043L5.177,22L12,17.321L18.823,22l-2.342-7.935L23.04,9z" fill="#9f9f9f" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon-small">
+                            <path d="M23.04,9h-8.27L12,1L9.23,9L0.96,9.021l6.559,5.043L5.177,22L12,17.321L18.823,22l-2.342-7.935L23.04,9z" fill="#9f9f9f" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="review_text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci reprehenderit aut fugit, excepturi natus, quibusdam earum qui veritatis hic architecto, corrupti dolorum. Officiis, delectus? Quia nobis molestias voluptatibus! Aliquid, in?
+                </div>
+                <div class="mt-3">
+                    <svg class="icon icon-large" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M18.918,8h-2.305 c-0.247-1.199-0.605-2.265-1.052-3.154C16.964,5.548,18.132,6.648,18.918,8z M20,12c0,0.692-0.097,1.359-0.263,2h-2.83 C16.967,13.357,17,12.689,17,12s-0.033-1.357-0.093-2h2.83C19.903,10.641,20,11.308,20,12z M12,20c-0.843,0-1.949-1.481-2.555-4 h5.109C13.949,18.519,12.843,20,12,20z M9.108,14C9.041,13.371,9,12.707,9,12s0.041-1.371,0.108-2h5.784 C14.959,10.629,15,11.293,15,12s-0.041,1.371-0.108,2H9.108z M4,12c0-0.692,0.097-1.359,0.263-2h2.83C7.033,10.643,7,11.311,7,12 s0.033,1.357,0.093,2h-2.83C4.097,13.359,4,12.692,4,12z M12,4c0.843,0,1.949,1.481,2.555,4H9.445C10.051,5.481,11.157,4,12,4z M8.44,4.846C7.993,5.735,7.635,6.801,7.388,8H5.082C5.868,6.648,7.036,5.548,8.44,4.846z M5.082,16h2.305 c0.247,1.199,0.605,2.265,1.052,3.154C7.036,18.452,5.868,17.352,5.082,16z M15.56,19.154c0.447-0.889,0.804-1.955,1.052-3.154 h2.305C18.132,17.352,16.964,18.452,15.56,19.154z" fill="#09B1BA" />
+                    </svg>
+                    <button class="btn" style="color: #09B1BA;">Traduire</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

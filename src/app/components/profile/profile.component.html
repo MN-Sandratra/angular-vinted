@@ -80,4 +80,56 @@
             </div>
         </div>
     </div>    
+    <app-tabs>
+        <app-tab-element title="Dressing">
+            <div class="articles container-fluid d-flex flex-column">
+                <div class="articles_header container-fluid d-flex justify-content-between mt-3">
+                    <div>
+                        profile.getArticlesNumber()  articles
+                    </div>
+                    <div class="filters d-flex flex-row align-items-center">
+                        <div class="d-flex align-items-center">
+                            <span>Catégorie</span>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle text-muted" type="button" id="filters_category" data-bs-toggle="dropdown" aria-expanded="false">
+                                Tous
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="filters_category">
+                                    <li><a class="dropdown-item" href="#">Tous</a></li>
+                                    <li><a class="dropdown-item" href="#">Homme</a></li>
+                                    <li><a class="dropdown-item" href="#">Femme</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="align-middle">Trier par</span>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle text-muted" type="button" id="filters_sort" data-bs-toggle="dropdown" aria-expanded="false">
+                                Pertinence
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="filters_sort">
+                                    <li><a class="dropdown-item" href="#">Pertinence</a></li>
+                                    <li><a class="dropdown-item" href="#">Prix Décroissant</a></li>
+                                    <li><a class="dropdown-item" href="#">Prix Croissant</a></li>
+                                    <li><a class="dropdown-item" href="#">Le plus récent</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid d-flex flex-wrap justify-content-start">
+                    <app-section-article></app-section-article>
+                    <app-section-article></app-section-article>
+                    <app-section-article></app-section-article>
+                    <app-section-article></app-section-article>
+                    <app-section-article></app-section-article>
+                </div>
+            </div>
+        </app-tab-element>
+        <app-tab-element title="Evaluation">
+            <div class="reviews container-fluid d-flex">
+                <app-review></app-review>
+            </div>
+        </app-tab-element>
+    </app-tabs>
 </div>

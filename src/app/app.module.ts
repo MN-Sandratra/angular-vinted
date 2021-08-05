@@ -14,6 +14,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CarousselArticlesComponent } from './components/caroussel-articles/caroussel-articles.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { TabsComponent } from './components/tabs/tabs.component';
+import { TabElementComponent } from './components/tab-element/tab-element.component';
+import { ReviewComponent } from './components/review/review.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { TabsComponent } from './components/tabs/tabs.component';
     FooterComponent,
     CarousselArticlesComponent,
     ProfileComponent,
-    TabsComponent
+    TabsComponent,
+    TabElementComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,

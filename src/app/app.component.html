@@ -37,8 +37,8 @@
   </div>
 </nav>
 
-<button id="openModal" [hidden] = "true" #openModal data-bs-toggle="modal" data-bs-target="#LiveModal">kez</button>
-<!-- Modal Wher do you live  -->
+<button id="openModal" [hidden]="true" #openModal data-bs-toggle="modal" data-bs-target="#LiveModal">show</button>
+<!-- Modal Where do you live  -->
 <div class="modal fade" id="LiveModal" tabindex="-1" aria-labelledby="LiveModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
@@ -51,39 +51,47 @@
           <div class="row">
             <h1 class="col-lg-12 mb-4">Where do you live ?</h1>
             <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
-                src="/assets/images/austria.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>Österreich</span>
+                src="/assets/images/login/austria.png" alt="" class="me-2" data-bs-dismiss="modal">
+              <span>Österreich</span>
             </div>
             <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
-                src="/assets/images/belgium.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>Belgique / België</span>
+                src="/assets/images/login/belgium.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>Belgique /
+                België</span>
             </div>
             <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
-                src="/assets/images/germany.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>Deutschland</span>
+                src="/assets/images/login/germany.png" alt="" class="me-2" data-bs-dismiss="modal">
+              <span>Deutschland</span>
             </div>
             <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
-                src="/assets/images/spain.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>España</span>
+                src="/assets/images/login/spain.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>España</span>
             </div>
             <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
-                src="/assets/images/france.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>France</span>
+                src="/assets/images/login/france.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>France</span>
             </div>
             <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
-                src="/assets/images/italy.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>Italia</span>
+                src="/assets/images/login/italy.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>Italia</span>
             </div>
             <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
-                src="/assets/images/lithuania.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>Lietuva</span>
+                src="/assets/images/login/lithuania.png" alt="" class="me-2" data-bs-dismiss="modal">
+              <span>Lietuva</span>
             </div>
             <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
-                src="/assets/images/luxembourg.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>Luxembourg</span>
+                src="/assets/images/login/luxembourg.png" alt="" class="me-2" data-bs-dismiss="modal">
+              <span>Luxembourg</span>
             </div>
             <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
-                src="/assets/images/netherlands.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>Nederland</span>
+                src="/assets/images/login/netherlands.png" alt="" class="me-2" data-bs-dismiss="modal">
+              <span>Nederland</span>
             </div>
             <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
-                src="/assets/images/portugal.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>Portugal</span>
+                src="/assets/images/login/portugal.png" alt="" class="me-2" data-bs-dismiss="modal">
+              <span>Portugal</span>
             </div>
             <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
-                src="/assets/images/great_britain.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>United Kingdom</span>
+                src="/assets/images/login/great_britain.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>United
+                Kingdom</span>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -106,12 +114,12 @@
             <h1 class="col-lg-12">Bienvenue !</h1>
             <button type="button"
               class="btn btn-outline-secondary col-lg-12 d-flex justify-content-center text-dark mb-2"
-              (click)="loginWithFacebook()" data-bs-dismiss="modal"><img src="/assets/images/fb.png" alt="" class="me-2"> Continuer avec
-              Facebook</button>
+              (click)="loginWithFacebook()" data-bs-dismiss="modal"><img src="/assets/images/login/fb.png" alt=""
+                class="me-2"> Continuer avec Facebook</button>
             <button type="button"
               class="btn btn-outline-secondary col-lg-12 d-flex justify-content-center text-dark mb-2"
-              (click)="loginWithGoogle()" data-bs-dismiss="modal"><img src="/assets/images/google.png" class="me-2" alt=""> Continuer avec
-              Google</button>
+              (click)="loginWithGoogle()" data-bs-dismiss="modal"><img src="/assets/images/login/google.png"
+                class="me-2" alt=""> Continuer avec Google</button>
             <div class="mt-2 text-gray">
               <p>Ou connecte-toi avec <span class="lien-login" [routerLink]="['login']"
                   routerLinkActive="router-link-active" data-bs-dismiss="modal">e-mail</span> </p>
@@ -139,11 +147,12 @@
             <h1 class="col-lg-12">Rejoins le mouvement de la seconde main et vends sans frais !</h1>
             <button type="button"
               class="btn btn-outline-secondary col-lg-12 d-flex justify-content-center text-dark mb-2"><img
-                src="/assets/images/fb.png" alt="" class="me-2" data-bs-dismiss="modal"> Continuer avec Facebook
+                src="/assets/images/login/fb.png" alt="" class="me-2" data-bs-dismiss="modal"> Continuer avec Facebook
             </button>
             <button type="button"
               class="btn btn-outline-secondary col-lg-12 d-flex justify-content-center text-dark mb-2"><img
-                src="/assets/images/google.png" class="me-2" alt="" data-bs-dismiss="modal"> Continuer avec Google</button>
+                src="/assets/images/login/google.png" class="me-2" alt="" data-bs-dismiss="modal"> Continuer avec
+              Google</button>
             <div class="mt-2 text-gray">
               <p>Ou inscris-toi avec <span class="lien-login" [routerLink]="['signup']"
                   routerLinkActive="router-link-active" data-bs-dismiss="modal">E-mail</span> </p>

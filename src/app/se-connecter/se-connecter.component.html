@@ -3,11 +3,7 @@
     <form class="row" (ngSubmit)="onSubmit()" [formGroup]="myform">
         <mat-form-field appearance="legacy" floatLabel="never" class="mb-3">
             <mat-label>Identifiant ou adresse email</mat-label>
-            <input matInput (focus)="hide_hint = !hide_hint" (blur)="hide_hint = !hide_hint" required
-                [formControl]="user">
-            <mat-hint [hidden]="hide_hint">Crée ton nom d'utilisateur en n'utilisant que des lettres et des chiffres.
-                Choisis-en un qui te plaît, tu ne pourras plus le changer.
-            </mat-hint>
+            <input matInput required [formControl]="user">
             <mat-error *ngIf="user.invalid">{{getUserMessage()}}</mat-error>
         </mat-form-field>
         <mat-form-field appearance="legacy" floatLabel="never" class="mb-3">

@@ -12,13 +12,16 @@ import {MatInputModule} from '@angular/material/input';
 
 import {MatCheckboxModule} from '@angular/material/checkbox'; 
 
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 const MaterialComponents = [
   MatButtonModule,
   MatIconModule,
   MatFormFieldModule,
   MatCardModule,
   MatInputModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatSnackBarModule
 ]
 
 @NgModule({

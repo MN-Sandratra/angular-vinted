@@ -1,5 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Apollo, gql } from 'apollo-angular';
+import { User } from '../models/User';
+
+const getUsers = gql`query {
+  getAllUsers {
+    password
+    username
+    email
+  }
+}`;
 
 @Component({
   selector: 'app-se-connecter',
@@ -8,25 +19,15 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class SeConnecterComponent implements OnInit {
 
+  allUsers:User[] = []; 
+
   hide = true;
 
-  hide_hint = true;
-
-  email = new FormControl('', [Validators.required, Validators.email]);
-
-  password = new FormControl('', [Validators.required , Validators.minLength(7)]);
+  password = new FormControl('', [Validators.required]);
 
   user = new FormControl('', [Validators.required]);
 
-  myform = new FormGroup({user:this.user, email:this.email, password:this.password});
-
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'Complète ces informations pour continuer';
-    }
-    
-    return this.email.hasError('email') ? 'Pas un email valide' : '';
-  }
+  myform = new FormGroup({user:this.user, password:this.password});
 
   getUserMessage() {
     if (this.user.hasError('required')) {
@@ -39,18 +40,53 @@ export class SeConnecterComponent implements OnInit {
     if (this.password.hasError('required')) {
       return 'Complète ces informations pour continuer';
     }
-    return (this.password.hasError('minlength')) ? 'Mot de passe : 7 caractères minimum' : '';
+    return '';
+  }
+
+  formReset(form: FormGroup) {
+
+    form.reset();
+
+    Object.keys(form.controls).forEach(key => {
+      form.get(key)?.setErrors(null) ;
+    });
   }
 
   onSubmit(){
     if (this.myform.valid) {
-      console.log("Form submit", this.myform.value);
-      this.myform.reset();
+      let person:any = this.allUsers.find(user => (this.user.value === user.username || this.user.value === user.email) && (this.password.value === user.password));
+      
+      if (person === undefined){
+        this.openSnackBarError('Identifiant ou mot de passe invalide', 'Fermer');
+      }
+      else {
+        this.openSnackBar('Identifiants vérifiés avec succès', 'Fermer');
+      }
+      this.formReset(this.myform);
     }
   }
-  constructor() { }
+  constructor(private apollo:Apollo, private snackBar: MatSnackBar) { }
 
+  openSnackBar(message:string, action:string) {
+    this.snackBar.open(message, action, {
+      duration: 3000,
+      panelClass: ['green-snackbar']
+    });
+  }
+
+  openSnackBarError(message:string, action:string) {
+    this.snackBar.open(message, action, {
+      duration: 3000,
+      panelClass: ['red-snackbar']
+    });
+  }
   ngOnInit(): void {
+    this.apollo.watchQuery<any>({
+      query: getUsers
+    }).valueChanges
+    .subscribe(({data}) => {
+      this.allUsers = data.getAllUsers;
+    });
   }
 
 }

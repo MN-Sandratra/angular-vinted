@@ -1,5 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Apollo, gql } from 'apollo-angular';
+import { User } from '../models/User';
+
+const postUser = gql`mutation($user: UserInput) { 
+  createUser(user: $user) {
+    username,
+    password,
+    email
+  }
+}`;
 
 @Component({
   selector: 'app-inscrire',
@@ -44,14 +55,52 @@ export class InscrireComponent implements OnInit {
     return (this.password.hasError('minlength')) ? 'Mot de passe : 7 caractères minimum' : '';
   }
 
+  formReset(form: FormGroup) {
+
+    form.reset();
+
+    Object.keys(form.controls).forEach(key => {
+      form.get(key)?.setErrors(null) ;
+    });
+  } 
+
   onSubmit(){
     if (this.myform.valid) {
-      console.log("Form submit", this.myform.value);
-      this.myform.reset();
+
+      this.apollo.mutate({
+        mutation : postUser,
+        variables: {
+          user: {
+            username: this.user.value,
+            password: this.password.value,
+            email: this.email.value
+          }
+        }
+      }).subscribe(({data}) => {
+        this.openSnackBarSuccess('Inscription effectée avec succès', 'Fermer');
+      },() => {
+        this.openSnackBarError('Nom d\'utilisateur déjà pris', 'Fermer');
+      });
+
+      this.formReset(this.myform);
     }
   }
   
-  constructor() { }
+  constructor(private apollo:Apollo, private snackbar: MatSnackBar) { }
+
+  openSnackBarSuccess(message:string, action:string) {
+    this.snackbar.open(message, action, {
+      duration: 3000,
+      panelClass: ['green-snackbar']
+    });
+  }
+
+  openSnackBarError(message:string, action:string) {
+    this.snackbar.open(message, action, {
+      duration: 3000,
+      panelClass: ['red-snackbar']
+    });
+  }
 
   ngOnInit(): void {
   }

@@ -20,6 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["crypto-js"],
             "outputPath": "dist/angular-vinted",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -36,7 +37,8 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/crypto-js/crypto-js.js"
             ]
           },
           "configurations": {

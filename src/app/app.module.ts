@@ -11,12 +11,13 @@ import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
+import { EncrDecrService } from './encr-decr-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     SeConnecterComponent,
-    InscrireComponent
+    InscrireComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +50,8 @@ import { HttpClientModule } from '@angular/common/http';
           }
         ]
       } as SocialAuthServiceConfig,
-    }
+    },
+    EncrDecrService
   ],
   bootstrap: [AppComponent]
 })

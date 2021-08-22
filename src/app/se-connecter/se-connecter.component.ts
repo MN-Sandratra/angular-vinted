@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Apollo, gql } from 'apollo-angular';
+import { EncrDecrService } from '../encr-decr-service.service';
 import { User } from '../models/User';
 
 const getUsers = gql`query {
@@ -31,14 +32,14 @@ export class SeConnecterComponent implements OnInit {
 
   getUserMessage() {
     if (this.user.hasError('required')) {
-      return 'Complète ces informations pour continuer';
+      return 'Complète ce champ pour continuer';
     }
     return '';
   }
 
   getPasswordError() {
     if (this.password.hasError('required')) {
-      return 'Complète ces informations pour continuer';
+      return 'Complète ce champ pour continuer';
     }
     return '';
   }
@@ -54,7 +55,8 @@ export class SeConnecterComponent implements OnInit {
 
   onSubmit(){
     if (this.myform.valid) {
-      let person:any = this.allUsers.find(user => (this.user.value === user.username || this.user.value === user.email) && (this.password.value === user.password));
+      let encrypted:string = this.EncrDecr.set('123456$#@$^@1ERF', this.password.value);
+      let person:any = this.allUsers.find(user => (this.user.value === user.username || this.user.value === user.email) && (encrypted === user.password));
       
       if (person === undefined){
         this.openSnackBarError('Identifiant ou mot de passe invalide', 'Fermer');
@@ -65,7 +67,7 @@ export class SeConnecterComponent implements OnInit {
       this.formReset(this.myform);
     }
   }
-  constructor(private apollo:Apollo, private snackBar: MatSnackBar) { }
+  constructor(private apollo:Apollo, private snackBar: MatSnackBar, private EncrDecr: EncrDecrService) { }
 
   openSnackBar(message:string, action:string) {
     this.snackBar.open(message, action, {

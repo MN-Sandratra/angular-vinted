@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Apollo, gql } from 'apollo-angular';
+import { EncrDecrService } from '../encr-decr-service.service';
 import { User } from '../models/User';
 
 const postUser = gql`mutation($user: UserInput) { 
@@ -35,7 +36,7 @@ export class InscrireComponent implements OnInit {
 
   getErrorMessage() {
     if (this.email.hasError('required')) {
-      return 'Complète ces informations pour continuer';
+      return 'Complète ce champ pour continuer';
     }
     
     return this.email.hasError('email') ? 'Pas un email valide' : '';
@@ -43,14 +44,14 @@ export class InscrireComponent implements OnInit {
 
   getUserMessage() {
     if (this.user.hasError('required')) {
-      return 'Complète ces informations pour continuer';
+      return 'Complète ce champ pour continuer';
     }
     return '';
   }
 
   getPasswordError() {
     if (this.password.hasError('required')) {
-      return 'Complète ces informations pour continuer';
+      return 'Complète ce champ pour continuer';
     }
     return (this.password.hasError('minlength')) ? 'Mot de passe : 7 caractères minimum' : '';
   }
@@ -66,19 +67,19 @@ export class InscrireComponent implements OnInit {
 
   onSubmit(){
     if (this.myform.valid) {
-
+      let encryptedPass:string = this.EncrDecr.set('123456$#@$^@1ERF', this.password.value);
       this.apollo.mutate({
         mutation : postUser,
         variables: {
           user: {
             username: this.user.value,
-            password: this.password.value,
+            password: encryptedPass,
             email: this.email.value
           }
         }
       }).subscribe(({data}) => {
         this.openSnackBarSuccess('Inscription effectée avec succès', 'Fermer');
-      },() => {
+      },(error) => {
         this.openSnackBarError('Nom d\'utilisateur déjà pris', 'Fermer');
       });
 
@@ -86,7 +87,7 @@ export class InscrireComponent implements OnInit {
     }
   }
   
-  constructor(private apollo:Apollo, private snackbar: MatSnackBar) { }
+  constructor(private apollo:Apollo, private snackbar: MatSnackBar, private EncrDecr: EncrDecrService) { }
 
   openSnackBarSuccess(message:string, action:string) {
     this.snackbar.open(message, action, {

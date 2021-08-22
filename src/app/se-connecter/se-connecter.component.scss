@@ -1,20 +1,16 @@
 ::ng-deep .mat-focused .mat-form-field-label {
-  /*change color of label*/
   color: #999999 !important;
 }
 
 ::ng-deep .mat-form-field-label {
-  /*change color of label*/
   color: #999999 !important;
 }
 
 ::ng-deep.mat-form-field-underline {
-  /*change color of underline*/
   background-color: #ececec !important;
 }
 
 ::ng-deep.mat-form-field-ripple {
-  /*change color of underline when focused*/
   background-color: #09aeb7 !important;
 }
 
@@ -26,11 +22,6 @@ mat-icon,
 .text-gray {
   color: #999999;
 }
-
-// tick remove
-// ::ng-deep .mat-checkbox-checkmark {
-//   display: none;
-// }
 
 mat-checkbox ::ng-deep .mat-checkbox-inner-container {
   width: 20px;
@@ -53,9 +44,4 @@ mat-checkbox ::ng-deep .mat-checkbox-inner-container {
 .btn.sign {
   color: #fff !important;
   background-color: #09aeb7 !important;
-}
-
-.newsletter {
-  color: rgba($color: #000000, $alpha: 0.6);
-  font-size: 16px;
 }

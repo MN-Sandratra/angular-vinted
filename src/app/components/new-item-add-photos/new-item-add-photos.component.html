@@ -1,11 +1,36 @@
 <div class="w-100 bg-body border p-3">
     <div class="p-2">
-        <p>Ajoute jusqu'à 20 photos. <a href="">Voir astuces</a></p>       
+        <p>Ajoute jusqu'à 20 photos. <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#Astuce">Voir astuces</a></p>       
     </div>
-    <div class="border p-5 d-flex justify-content-center">
-        <button class="p-2">
+    <div class=" border p-5 d-flex justify-content-center">
+        <a href="#" class="p-2 button btnNotFull">
             <fa-icon [icon]="['fas','plus']" size="sm"></fa-icon>
             Ajoute des photos
-        </button>
+        </a>
+    </div>  
+    <!-- Modal -->
+    <div class="modal fade" id="Astuce" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body d-flex flex-row-reverse">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body">
+                    <h3>Titre page</h3>
+                </div>
+                <div >
+                    <img class="img-fluid" src="../../../assets/images/tshirt-rouge.png" alt="">
+                </div>
+                <div>
+                    <p>giUWEOFKAEPFJAPROFJPAROJPOW</p>
+                </div>
+            </div>
+            <div class="modal-body d-flex justify-content-between">
+            <a href="#" class="button btnNotFull" data-bs-dismiss="modal">Précédent</a>
+            <a href="#" class="button btnFull">Suivant</a>
+            </div>
+        </div>
+        </div>
     </div>
 </div>

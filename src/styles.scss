@@ -1,0 +1,34 @@
+.button{
+    border-radius: 3%;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.btnFull{
+    background-color: #09B1BA;
+    color: white;
+    border: none;
+}
+.btnNotFull{
+    color: #09B1BA;
+    border: 0.5px solid #09B1BA;
+}
+.btnFull:hover{
+    background-color: #0ba0a8;
+    color: white;
+}
+.btnNotFull:hover{
+    color: #09B1BA;
+    border: 0.5px solid #09B1BA;
+    background-color: #0ba0a80e;
+}
+.link{
+    color:#09B1BA ;
+    text-decoration: none;
+}
+.link:hover{
+    color:#09B1BA ;
+    text-decoration:underline;
+}

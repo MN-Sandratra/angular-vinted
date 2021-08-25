@@ -19,6 +19,13 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { NewItemContentComponent } from './components/new-item-content/new-item-content.component';
 import { NewItemAddPhotosComponent } from './components/new-item-add-photos/new-item-add-photos.component';
 import { NewItemDescriptionsComponent } from './components/new-item-descriptions/new-item-descriptions.component';
+import { AboutHowItWorksComponent } from './components/about-how-it-works/about-how-it-works.component';
+import { TopAboutHowItWorksComponent } from './components/top-about-how-it-works/top-about-how-it-works.component';
+import { VendreAboutHowItWorksComponent } from './components/vendre-about-how-it-works/vendre-about-how-it-works.component';
+import { AcheterAboutHowItWorksComponent } from './components/acheter-about-how-it-works/acheter-about-how-it-works.component';
+import { SecuriteAboutHowItWorksComponent } from './components/securite-about-how-it-works/securite-about-how-it-works.component';
+import { PretAboutHowItWorksComponent } from './components/pret-about-how-it-works/pret-about-how-it-works.component';
+import { BottomAboutHowItWorksComponent } from './components/bottom-about-how-it-works/bottom-about-how-it-works.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +42,15 @@ import { NewItemDescriptionsComponent } from './components/new-item-descriptions
     routingComponents,
     NewItemContentComponent,
     NewItemAddPhotosComponent,
-    NewItemDescriptionsComponent
+    NewItemDescriptionsComponent,
+
+    AboutHowItWorksComponent,
+    TopAboutHowItWorksComponent,
+    VendreAboutHowItWorksComponent,
+    AcheterAboutHowItWorksComponent,
+    SecuriteAboutHowItWorksComponent,
+    PretAboutHowItWorksComponent,
+    BottomAboutHowItWorksComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +59,9 @@ import { NewItemDescriptionsComponent } from './components/new-item-descriptions
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
+
 export class AppModule { 
   constructor(library:FaIconLibrary){
     library.addIconPacks(fas,far);

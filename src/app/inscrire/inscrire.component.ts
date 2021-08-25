@@ -1,17 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Apollo, gql } from 'apollo-angular';
 import { EncrDecrService } from '../encr-decr-service.service';
 import { User } from '../models/User';
-
-const postUser = gql`mutation($user: UserInput) { 
-  createUser(user: $user) {
-    username,
-    password,
-    email
-  }
-}`;
+import { UserService } from '../user-service.service';
 
 @Component({
   selector: 'app-inscrire',
@@ -19,7 +11,9 @@ const postUser = gql`mutation($user: UserInput) {
   styleUrls: ['./inscrire.component.scss']
 })
 export class InscrireComponent implements OnInit {
-  
+
+  myUser = new User();
+
   hide = true;
 
   hide_hint = true;
@@ -68,26 +62,20 @@ export class InscrireComponent implements OnInit {
   onSubmit(){
     if (this.myform.valid) {
       let encryptedPass:string = this.EncrDecr.set('123456$#@$^@1ERF', this.password.value);
-      this.apollo.mutate({
-        mutation : postUser,
-        variables: {
-          user: {
-            username: this.user.value,
-            password: encryptedPass,
-            email: this.email.value
-          }
-        }
-      }).subscribe(({data}) => {
-        this.openSnackBarSuccess('Inscription effectée avec succès', 'Fermer');
-      },(error) => {
-        this.openSnackBarError('Nom d\'utilisateur déjà pris', 'Fermer');
-      });
+      
+      this.myUser = {
+        username: this.user.value,
+        password: encryptedPass,
+        email: this.email.value
+      }
+
+      this.createUser();
 
       this.formReset(this.myform);
     }
   }
   
-  constructor(private apollo:Apollo, private snackbar: MatSnackBar, private EncrDecr: EncrDecrService) { }
+  constructor(private snackbar: MatSnackBar, private EncrDecr: EncrDecrService, private apiUser:UserService) { }
 
   openSnackBarSuccess(message:string, action:string) {
     this.snackbar.open(message, action, {
@@ -100,6 +88,15 @@ export class InscrireComponent implements OnInit {
     this.snackbar.open(message, action, {
       duration: 3000,
       panelClass: ['red-snackbar']
+    });
+  }
+
+  createUser(){
+    this.apiUser.createUser(this.myUser).subscribe(({data}) => {
+      this.openSnackBarSuccess('Inscription effectée avec succès', 'Fermer');
+    },(error) => {
+      this.openSnackBarError('Nom d\'utilisateur déjà pris', 'Fermer');
+      console.log(error)
     });
   }
 

@@ -4,7 +4,7 @@
         <mat-form-field appearance="legacy" floatLabel="never" class="mb-3" [hideRequiredMarker]="true">
             <mat-label>Identifiant ou adresse email</mat-label>
             <input matInput required [formControl]="user">
-            <mat-error *ngIf="user.invalid">{{getUserMessage()}}</mat-error>
+            <mat-error *ngIf="user.invalid">{{getErrorMessage(user)}}</mat-error>
         </mat-form-field>
         <mat-form-field appearance="legacy" floatLabel="never" class="mb-3" [hideRequiredMarker]="true">
             <mat-label>Mot de passe</mat-label>
@@ -13,12 +13,11 @@
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
-            <mat-error *ngIf="password.invalid">{{getPasswordError()}}</mat-error>
+            <mat-error *ngIf="password.invalid">{{getErrorMessage(password)}}</mat-error>
         </mat-form-field>
 
         <button type="submit" class="btn btn-info sign">Se connecter</button>
     </form>
     <p class="lien-terme mt-3 mb-3">Mot de passe oublié</p>
     <p class="lien-terme">Besoin d'aide ?</p>
-    <p></p>
 </div>

@@ -1,17 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Apollo, gql } from 'apollo-angular';
 import { EncrDecrService } from '../encr-decr-service.service';
 import { User } from '../models/User';
-
-const getUsers = gql`query {
-  getAllUsers {
-    password
-    username
-    email
-  }
-}`;
+import { UserService } from '../user-service.service';
 
 @Component({
   selector: 'app-se-connecter',
@@ -30,15 +22,8 @@ export class SeConnecterComponent implements OnInit {
 
   myform = new FormGroup({user:this.user, password:this.password});
 
-  getUserMessage() {
-    if (this.user.hasError('required')) {
-      return 'Complète ce champ pour continuer';
-    }
-    return '';
-  }
-
-  getPasswordError() {
-    if (this.password.hasError('required')) {
+  getErrorMessage(champ:FormControl) {
+    if (champ.hasError('required')) {
       return 'Complète ce champ pour continuer';
     }
     return '';
@@ -67,7 +52,7 @@ export class SeConnecterComponent implements OnInit {
       this.formReset(this.myform);
     }
   }
-  constructor(private apollo:Apollo, private snackBar: MatSnackBar, private EncrDecr: EncrDecrService) { }
+  constructor(private snackBar: MatSnackBar, private EncrDecr: EncrDecrService, private apiUser: UserService) { }
 
   openSnackBar(message:string, action:string) {
     this.snackBar.open(message, action, {
@@ -82,13 +67,19 @@ export class SeConnecterComponent implements OnInit {
       panelClass: ['red-snackbar']
     });
   }
+
+  getUsers() {
+    this.apiUser.getAllUser().valueChanges.subscribe(
+      ({data})=>{
+        this.allUsers = data.getAllUsers;
+      },(err)=>{
+        console.log(err);
+      }
+    );
+  }
+
   ngOnInit(): void {
-    this.apollo.watchQuery<any>({
-      query: getUsers
-    }).valueChanges
-    .subscribe(({data}) => {
-      this.allUsers = data.getAllUsers;
-    });
+    this.getUsers();
   }
 
 }

@@ -33,3 +33,21 @@ body {
 .imageVente {
     width: 100%;
 }
+
+.aboutimage {
+    background-image: url(assets/images/about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-shadow: white 0px 0px 2px;
+    height: 730px;
+    width: 100%;
+}
+
+.centered {
+    margin-top: -25%;
+    text-align: center;
+}
+
+.centres {
+    text-align: center;
+}

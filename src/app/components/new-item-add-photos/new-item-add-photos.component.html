@@ -3,7 +3,10 @@
         <p>Ajoute jusqu'à 20 photos. <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#Astuce">Voir astuces</a></p>       
     </div>
     <div class=" border p-5 d-flex justify-content-center">
-        <a href="#" class="p-2 button btnNotFull">
+        <input type="file" (change)="onFolderSelected($event)" webkitdirectory multiple/>
+        
+        
+        <a href="#" class="p-2 button btnNotFull" >
             <fa-icon [icon]="['fas','plus']" size="sm"></fa-icon>
             Ajoute des photos
         </a>
@@ -15,20 +18,84 @@
             <div class="modal-body d-flex flex-row-reverse">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" id="astuces1">
                 <div class="modal-body">
-                    <h3>Titre page</h3>
+                    <h3>Privilégie une lumière naturelle</h3>
                 </div>
-                <div >
-                    <img class="img-fluid" src="../../../assets/images/tshirt-rouge.png" alt="">
+                <div class="d-flex flex-row">
+                    <img class="img-fluid" src="../../../assets/images/astuces/A1_imgLeft.png" alt="">
+                    <img class="img-fluid" src="../../../assets/images/astuces/A1_imgRight.png" alt="">
                 </div>
                 <div>
-                    <p>giUWEOFKAEPFJAPROFJPAROJPOW</p>
+                    <p>Des photos prises dans une pièce bien éclairée et à la lumière du jour sont plus attrayantes.</p>
                 </div>
             </div>
-            <div class="modal-body d-flex justify-content-between">
-            <a href="#" class="button btnNotFull" data-bs-dismiss="modal">Précédent</a>
-            <a href="#" class="button btnFull">Suivant</a>
+            <div class="modal-body" id="astuces2">
+                <div class="modal-body">
+                    <h3>Choisis un arrière-plan neutre</h3>
+                </div>
+                <div class="d-flex flex-row">
+                    <img class="img-fluid" src="../../../assets/images/astuces/A2_imgLeft.png" alt="">
+                    <img class="img-fluid" src="../../../assets/images/astuces/A2_imgRight.png" alt="">
+                </div>
+                <div>
+                    <p>L’arrière-plan de ta photo doit être sobre, épuré et neutre afin de mettre en valeur ton article.</p>
+                </div>
+            </div>
+            <div class="modal-body" id="astuces3">
+                <div class="modal-body">
+                    <h3>N’utilise pas de flash</h3>
+                </div>
+                <div class="d-flex flex-row">
+                    <img class="img-fluid" src="../../../assets/images/astuces/A3_imgLeft.png" alt="">
+                    <img class="img-fluid" src="../../../assets/images/astuces/A3_imgRight.png" alt="">
+                </div>
+                <div>
+                    <p>La lumière artificielle peut modifier les couleurs, il est conseillé de ne pas utiliser de flash.</p>
+                </div>
+            </div>
+            <div class="modal-body" id="astuces4">
+                <div class="modal-body">
+                    <h3>Présente bien ton article</h3>
+                </div>
+                <div class="d-flex flex-row">
+                    <img class="img-fluid" src="../../../assets/images/astuces/A4_imgLeft.png" alt="">
+                    <img class="img-fluid" src="../../../assets/images/astuces/A4_imgRight.png" alt="">
+                </div>
+                <div>
+                    <p>Prends des photos sous différents angles. N’oublie pas les détails importants : étiquettes, traces d’usures, défauts, etc.</p>
+                </div>
+            </div>
+            <div class="modal-body" id="astuces5">
+                <div class="modal-body">
+                    <h3>Utilise tes propres images</h3>
+                </div>
+                <div class="d-flex flex-row">
+                    <img class="img-fluid" src="../../../assets/images/astuces/A5_imgLeft.png" alt="">
+                    <img class="img-fluid" src="../../../assets/images/astuces/A5_imgRight.png" alt="">
+                </div>
+                <div>
+                    <p>Prends des photos par toi-même ou avec l’aide d’un ami. Les images protégées par des droits d'auteur ne sont pas autorisées.</p>
+                </div>
+            </div>
+            <div class="modal-body d-flex justify-content-between w-100 bg-danger">
+                <nav aria-label="Page navigation example" class="bg-success w-100 d-flex justify-content-between">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a href="#" class="button btnNotFull" data-bs-dismiss="modal">Précédent</a>
+                      </li>
+                      <li class="page-item"><a class="page-link active" href="#astuces1">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item">
+                        <a href="#" class="button btnFull">Suivant</a>
+                      </li>
+                    </ul>
+                  </nav>
+           
+            
             </div>
         </div>
         </div>

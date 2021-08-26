@@ -31,7 +31,7 @@
 }
 .link:hover{
     color:#09B1BA ;
-    text-decoration:underline;
+    background-color: #0ba0a80e;
 }
 
 html,
@@ -41,4 +41,10 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.titredescriArticle{
+    font-size: 18px;
+}
+.descriArticle{
+    font-size: 12px;
 }

@@ -22,6 +22,9 @@ import { NewItemDescriptionsComponent } from './components/new-item-descriptions
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MaterialModule } from './material/material.module';
+import  {NgxPaginationModule}from 'ngx-pagination';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +40,8 @@ import { MaterialModule } from './material/material.module';
     routingComponents,
     NewItemContentComponent,
     NewItemAddPhotosComponent,
-    NewItemDescriptionsComponent
+    NewItemDescriptionsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,9 @@ import { MaterialModule } from './material/material.module';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxPaginationModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

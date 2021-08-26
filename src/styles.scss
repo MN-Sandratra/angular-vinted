@@ -1,0 +1,35 @@
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.fond_top_about_it_works {
+    background-image: url(assets/images/fond_top_about_it_works1.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-shadow: white 0px 0px 2px;
+    font-size: 16px;
+}
+
+.size {
+    width: 1600px;
+    height: 500px;
+    margin-left: -3%;
+}
+
+.pretbackground {
+    background-image: url(assets/images/pret1.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contenu {
+    margin-left: 3%;
+}
+
+.imageVente {
+    width: 100%;
+}

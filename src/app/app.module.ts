@@ -26,6 +26,7 @@ import { AcheterAboutHowItWorksComponent } from './components/acheter-about-how-
 import { SecuriteAboutHowItWorksComponent } from './components/securite-about-how-it-works/securite-about-how-it-works.component';
 import { PretAboutHowItWorksComponent } from './components/pret-about-how-it-works/pret-about-how-it-works.component';
 import { BottomAboutHowItWorksComponent } from './components/bottom-about-how-it-works/bottom-about-how-it-works.component';
+import { FooterAboutHowItWorksComponent } from './footer-about-how-it-works/footer-about-how-it-works.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { BottomAboutHowItWorksComponent } from './components/bottom-about-how-it
     AcheterAboutHowItWorksComponent,
     SecuriteAboutHowItWorksComponent,
     PretAboutHowItWorksComponent,
-    BottomAboutHowItWorksComponent
+    BottomAboutHowItWorksComponent,
+    FooterAboutHowItWorksComponent
   ],
   imports: [
     BrowserModule,

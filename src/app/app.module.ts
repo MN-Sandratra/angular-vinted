@@ -20,7 +20,7 @@ import { NewItemContentComponent } from './components/new-item-content/new-item-
 import { NewItemAddPhotosComponent } from './components/new-item-add-photos/new-item-add-photos.component';
 import { NewItemDescriptionsComponent } from './components/new-item-descriptions/new-item-descriptions.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +42,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule
   ],
   providers: [],

@@ -13,6 +13,10 @@
                 <p>Décris ton article</p> 
             </div>
             <div class="w-50">
+                <mat-form-field appearance="legacy" floatLabel="never" class="mb-3" [hideRequiredMarker]="true">
+                    <mat-label>Email</mat-label>
+                    <input matInput [formControl]="text" required>
+                </mat-form-field>
                 <input type="text" class="form-control" placeholder="ex : porté quelques fois, taille correctement" aria-label="Titre" aria-describedby="basic-addon1">
             </div>  
          </div>

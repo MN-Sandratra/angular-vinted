@@ -21,6 +21,7 @@ import { NewItemAddPhotosComponent } from './components/new-item-add-photos/new-
 import { NewItemDescriptionsComponent } from './components/new-item-descriptions/new-item-descriptions.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MaterialModule } from './material/material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    MaterialModule,
     BrowserAnimationsModule
   ],
   providers: [],

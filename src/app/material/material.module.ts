@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import {MatButtonModule} from '@angular/material/button'; 
 
 import {MatFormFieldModule} from '@angular/material/form-field'; 
@@ -13,6 +14,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox'; 
 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSelectModule } from '@angular/material/select';
+
 
 const MaterialComponents = [
   MatButtonModule,
@@ -21,7 +24,9 @@ const MaterialComponents = [
   MatCardModule,
   MatInputModule,
   MatCheckboxModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatSelectModule
+
 ]
 
 @NgModule({

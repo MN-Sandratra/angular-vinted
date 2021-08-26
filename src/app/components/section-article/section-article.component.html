@@ -2,7 +2,7 @@
     <div style="width: 20%;">
         <div *ngIf="showUser" class="fs-6 text-black-50">
             <img src="/assets/images/account_24px.png" alt="">
-            sofiagd
+            {{ user.username }}
         </div>
         <a href="#" style="text-decoration: none;color: black;">
             <img class="img-fluid" src="/assets/images/tshirt-blanc.png" alt="">
@@ -10,9 +10,9 @@
         <div class="container">
             <div class="d-flex flex-row justify-content-between">
                 <div>
-                    <div class="fs-5">10,00 $</div> 
-                    <div class="text-black-50 fs-6"> S / 36 / 8</div>
-                    <div class="text-black-50 fs-6">Zara</div>
+                    <div class="fs-5">{{ prix }}</div> 
+                    <div class="text-black-50 fs-6">{{ description }}</div>
+                    <div class="text-black-50 fs-6">{{ marque }}</div>
                 </div>
                 <div class="d-flex flex-row text-black-50 ">
                     <a href="#" style="text-decoration: none;" class="fs-6 text-black-50"> <img src="style/image/heart_24px.png" alt="">

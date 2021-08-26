@@ -16,6 +16,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { TabElementComponent } from './components/tab-element/tab-element.component';
 import { ReviewComponent } from './components/review/review.component';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { ReviewComponent } from './components/review/review.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GraphQLModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

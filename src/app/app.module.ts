@@ -19,6 +19,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { NewItemContentComponent } from './components/new-item-content/new-item-content.component';
 import { NewItemAddPhotosComponent } from './components/new-item-add-photos/new-item-add-photos.component';
 import { NewItemDescriptionsComponent } from './components/new-item-descriptions/new-item-descriptions.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { NewItemDescriptionsComponent } from './components/new-item-descriptions
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

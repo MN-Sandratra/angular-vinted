@@ -1,3 +1,4 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 .button{
     border-radius: 3%;
     padding: 8px 15px;
@@ -31,4 +32,13 @@
 .link:hover{
     color:#09B1BA ;
     text-decoration:underline;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

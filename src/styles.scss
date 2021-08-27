@@ -1,9 +1,11 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@ctrl/ngx-emoji-mart/picker";
 
 html,
 body {
   height: 100%;
+  background-color: #dedede;
 }
 body {
   margin: 0;

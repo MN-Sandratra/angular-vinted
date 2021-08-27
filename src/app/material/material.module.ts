@@ -22,6 +22,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import {MatDatepickerModule} from '@angular/material/datepicker'; 
 
+import {MatRadioModule} from '@angular/material/radio'; 
+
 const MaterialComponents = [
   MatButtonModule,
   MatIconModule,
@@ -34,6 +36,7 @@ const MaterialComponents = [
   MatGridListModule,
   MatSnackBarModule,
   MatDatepickerModule,
+  MatRadioModule
 ]
 
 @NgModule({

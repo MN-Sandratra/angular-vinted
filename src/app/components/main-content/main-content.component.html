@@ -5,7 +5,7 @@
             <a href="" class="mt-3 link p-1">Voir tout</a>
         </div>
         <app-content-section>
-            <app-section-article *ngFor="let article of articles"></app-section-article>
+            <app-section-article *ngFor="let art of Articles" [MyArticle]="art"></app-section-article>
         </app-content-section>
     </div>
     <div class="mt-5">
@@ -23,7 +23,7 @@
     <div class="mt-5">
         <h1>Fil d'actu</h1>
         <app-content-section>
-            <app-section-article *ngFor="let article of articles" [showUser] = "true"></app-section-article>
+            <app-section-article *ngFor="let art of articles" [showUser] = "true" [MyArticle]="art"></app-section-article>
         </app-content-section>
     </div>
     <div class="mt-5">
@@ -33,7 +33,7 @@
         </div>
         <app-content-section >
             <app-caroussel-articles>
-                <app-section-article *ngFor="let article of articles"></app-section-article>        
+                <app-section-article *ngFor="let article of Articles" [MyArticle]="article"></app-section-article>        
             </app-caroussel-articles>
         </app-content-section>
     </div>

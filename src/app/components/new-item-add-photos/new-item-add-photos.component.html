@@ -3,7 +3,10 @@
         <p>Ajoute jusqu'à 20 photos. <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#Astuce">Voir astuces</a></p>       
     </div>
     <div class=" border p-5 d-flex justify-content-center">
-        <a href="#" class="p-2 button btnNotFull" >
+        <input hidden #Imageinput type="file" id="file" (change)="onFolderSelected($event)" multiple accept="image/png, image/gif, image/jpeg"/>
+        
+        
+        <a for="file" class="p-2 button btnNotFull" (click)="Imageinput.click()">
             <fa-icon [icon]="['fas','plus']" size="sm"></fa-icon>
             Ajoute des photos
         </a>

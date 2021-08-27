@@ -21,7 +21,7 @@ const routes: Routes = [
   {path:'clone',component:CloneProposComponent},
   {path: "login", component: SeConnecterComponent}, 
   {path : "signup", component: InscrireComponent},
-  { path: 'article-detail', component: ArticleDetailComponent },
+  { path: 'article-detail/:id', component: ArticleDetailComponent },
   { path: 'chat', component: ChatComponent }, 
   { path: 'achat', component: AchatComponent },
 ]

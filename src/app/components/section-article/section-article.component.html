@@ -4,15 +4,15 @@
                 <fa-icon [icon]="['far','user']" size="lg"></fa-icon>
                 sofiagd
         </div>
-        <a href="#" style="text-decoration: none;color: black;">
-            <img class="img-fluid" src="/assets/images/tshirt-blanc.png" alt="" style="max-width: 250px;">
+        <a style="text-decoration: none;color: black;">
+            <img class="img-fluid" src="/assets/images/tshirt-blanc.png" alt="" style="max-width: 250px;" [routerLink]="['/article-detail',MyArticle.id]">
         </a>
         <div class="container">
             <div class="d-flex flex-row justify-content-between">
                 <div>
-                    <div class="titredescriArticle">10,00 $</div> 
-                    <div class="text-black-50 descriArticle"> S / 36 / 8</div>
-                    <div class="text-black-50 descriArticle">Zara</div>
+                    <div class="titredescriArticle">{{MyArticle.prix}} Ar</div> 
+                    <div class="text-black-50 descriArticle">{{MyArticle.titre}}</div>
+                    <div class="text-black-50 descriArticle">{{MyArticle.marque}}</div>
                 </div>
                 <div class="d-flex flex-row text-black-50 ">
                     <a href="#" style="text-decoration: none;" class="text-black-50 descriArticle">  <fa-icon [icon]="['far','heart']" size="lg" class="text-black-50"></fa-icon>

@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light border-bottom">
+<nav class="navbar navbar-expand-lg navbar-light border-bottom resize">
     <div class="container d-flex flex-row w-100">
-        <a class="navbar-brand ms-5 " [routerLink]="['']" routerLinkActive="true" >
+        <a class="navbar-brand ms-5" [routerLink]="['']" routerLinkActive="true" >
            <img src="/assets/images/logo-vinted.png" alt="" style="max-width:80px ;">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,9 +9,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav w-100">
                 <li class="nav-item w-50" >
-                    <div class="d-flex flex-row ms-5">
+                    <div class="d-flex flex-row ms-5 align-items-center ">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle border-end" href="#" id="Articles" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle border-end bg-light resizedropdown" href="#" id="Articles" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Articles
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="Articles">
@@ -21,62 +21,69 @@
                                 <li><a class="dropdown-item" href="#">Centre d'aide</a></li>
                             </ul>
                         </li>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Rechercher des articles" aria-label="Search">
-                        </form>
+                        <div class="d-flex mt-3">
+                            <mat-form-field appearance="fill" floatLabel="never" class="w-100" [hideRequiredMarker]="true"> 
+                                <mat-icon matPrefix>search</mat-icon>
+                                <mat-label>Rechercher des articles</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <fa-icon [icon]="['far','envelope']" size="lg"></fa-icon>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <fa-icon [icon]="['far','bell']" size="lg"></fa-icon>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <fa-icon [icon]="['far','heart']" size="lg"></fa-icon>
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="compte" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <fa-icon [icon]="['far','user']" size="lg"></fa-icon>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="compte">
-                        <li class="dropdown-header muted" style="font-size: 10px;">MON COMPTE </li>
-                        <li><a class="dropdown-item" href="#">Mon profil</a></li>
-                        <li><a class="dropdown-item" href="#">Mes paramètres</a></li>
-                        <li><a class="dropdown-item" href="#">Personnalisation</a></li>
-                        <li><a class="dropdown-item" href="#">Mon porte-monnaie</a></li>
-                        <li><a class="dropdown-item" href="#">Invite tes amis</a></li>
-                        <li><a class="dropdown-item text-danger" href="#">Se déconnecter</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/new']" routerLinkActive="true"  style="color: white;background-color: #09B1BA;border-radius: 3%;">Vends tes articles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <fa-icon [icon]="['far','question-circle']" size="lg"></fa-icon>
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="FR" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        FR
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="FR">
-                        <li><a class="dropdown-item" href="#">Francais (French)</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">English (English)</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Espanol (Spanish)</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Nederlands (Dutch)</a></li>
-                    </ul>
-                </li>
+                <div class="d-flex align-items-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <fa-icon [icon]="['far','envelope']" size="lg"></fa-icon>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <fa-icon [icon]="['far','bell']" size="lg"></fa-icon>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <fa-icon [icon]="['far','heart']" size="lg"></fa-icon>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="compte" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <fa-icon [icon]="['far','user']" size="lg"></fa-icon>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="compte">
+                            <li class="dropdown-header muted" style="font-size: 10px;">MON COMPTE </li>
+                            <li><a class="dropdown-item" href="#">Mon profil</a></li>
+                            <li><a class="dropdown-item" href="#">Mes paramètres</a></li>
+                            <li><a class="dropdown-item" href="#">Personnalisation</a></li>
+                            <li><a class="dropdown-item" href="#">Mon porte-monnaie</a></li>
+                            <li><a class="dropdown-item" href="#">Invite tes amis</a></li>
+                            <li><a class="dropdown-item text-danger" href="#">Se déconnecter</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/new']" routerLinkActive="true"  style="color: white;background-color: #09B1BA;border-radius: 3%;">Vends tes articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <fa-icon [icon]="['far','question-circle']" size="lg"></fa-icon>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="FR" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            FR
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="FR">
+                            <li><a class="dropdown-item" href="#">Francais (French)</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">English (English)</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Espanol (Spanish)</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Nederlands (Dutch)</a></li>
+                        </ul>
+                    </li>
+                </div>
             </ul>
             
         </div>

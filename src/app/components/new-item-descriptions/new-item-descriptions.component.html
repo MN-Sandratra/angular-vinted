@@ -49,7 +49,7 @@
                 <mat-form-field appearance="legacy" floatLabel="never" class="w-100" [hideRequiredMarker]="true">
                     <mat-label>Sélectionne la marque</mat-label>
                     <mat-select required [formControl]="marque">
-                        <mat-option *ngFor="let marque of marques" value="marque">{{marque}}</mat-option>
+                        <mat-option *ngFor="let marque of marques" value="{{marque}}">{{marque}}</mat-option>
                     </mat-select>
                     <mat-error *ngIf="marque.invalid">{{getErrorMessage(marque)}}</mat-error>
                 </mat-form-field>

@@ -40,7 +40,6 @@
 html,
 body {
   height: 100%;
-  background-color: #dedede;
 }
 body {
   margin: 0;
@@ -123,4 +122,8 @@ body {
 
 .text-gray {
   color: rgb(102, 102, 102);
+}
+
+.bg-body {
+  background-color: #fff !important;
 }

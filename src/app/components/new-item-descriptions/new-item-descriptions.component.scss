@@ -1,24 +1,20 @@
 ::ng-deep .mat-focused .mat-form-field-label {
-    color: #999999 !important;
-  }
-  
-  ::ng-deep .mat-form-field-label {
-    color: #999999 !important;
-  }
-  
-  ::ng-deep.mat-form-field-underline {
-    background-color: #ececec !important;
-  }
-  
-  ::ng-deep.mat-form-field-ripple {
-    background-color: #09aeb7 !important;
-  }
-  
-  .box-signin {
-    width: 288px;
-  }
-  
-  mat-icon,
-  .text-gray {
-    color: #999999;
-  }
+  color: #999999 !important;
+}
+
+::ng-deep .mat-form-field-label {
+  color: #999999 !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  background-color: #ececec !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  background-color: #09aeb7 !important;
+}
+
+mat-icon,
+.text-gray {
+  color: #999999;
+}

@@ -57,7 +57,7 @@
 }
 
 .discussion {
-  max-height: 55vh;
+  max-height: 75vh;
   width: 100%;
   font-size: 15px;
   overflow-y: scroll;
@@ -70,7 +70,7 @@
     text-align: start;
     border: 1px solid #999999;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
   }
 
   & .receiver {

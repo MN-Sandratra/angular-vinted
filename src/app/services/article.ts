@@ -6,6 +6,8 @@ export class Article {
     prix!:String;
     echange!:String;
     createdAt!:Date;
-    image!:[];
+    image!:[{
+        path: String
+    }];
     color!:[];
 }

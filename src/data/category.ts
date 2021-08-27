@@ -3,7 +3,9 @@ const category = [
     'Robe',
     'Chemise',
     'Accessoires',
-    'Technologies'
+    'Technologies',
+    'Chemises',
+    'Sac'
 ];
 
     export default category;

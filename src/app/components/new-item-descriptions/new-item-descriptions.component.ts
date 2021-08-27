@@ -4,6 +4,7 @@ import { Article } from 'src/app/services/article';
 import { ArticleService } from 'src/app/services/article.service';
 import marques from 'src/data/marque';
 import category from 'src/data/category';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 export interface Etat{
@@ -23,7 +24,7 @@ export class NewItemDescriptionsComponent implements OnInit {
   public marques:string[]=[];
   public categories:string[]=[];
   public etats:Etat[]=[];
-  constructor(private article:ArticleService) { }
+  constructor(private article:ArticleService, private snackBar:MatSnackBar) { }
   designation = new FormControl('', Validators.required);
   description = new FormControl('', Validators.required);
   prix = new FormControl('', Validators.required);
@@ -60,9 +61,35 @@ export class NewItemDescriptionsComponent implements OnInit {
   AddArticle(){
     if(this.ArticleForm.valid){
       this.createArticle();
+      this.openSnackBar("Ajout article réussi", "Fermer");
+      this.formReset(this.ArticleForm);
     }else{
       console.log("Erreur");
+      this.openSnackBarError("Erreur", "Fermer");
     }
+  }
+
+  formReset(form: FormGroup) {
+
+    form.reset();
+
+    Object.keys(form.controls).forEach(key => {
+      form.get(key)?.setErrors(null) ;
+    });
+  }
+
+  openSnackBar(message:string, action:string) {
+    this.snackBar.open(message, action, {
+      duration: 3000,
+      panelClass: ['green-snackbar']
+    });
+  }
+
+  openSnackBarError(message:string, action:string) {
+    this.snackBar.open(message, action, {
+      duration: 3000,
+      panelClass: ['red-snackbar']
+    });
   }
 
   createArticle(){
@@ -73,7 +100,11 @@ export class NewItemDescriptionsComponent implements OnInit {
     newArticle.prix=this.prix.value;
     newArticle.marque=this.marque.value;
     newArticle.color=[];
-    newArticle.image=[];
+    newArticle.image=[
+      {
+        path:"assets/images/tshirt-blanc.png"
+      }
+    ];
 
     this.article.createArticle(newArticle).subscribe(data=>{
       console.log(data)

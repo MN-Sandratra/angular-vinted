@@ -13,6 +13,7 @@ export class SectionArticleComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

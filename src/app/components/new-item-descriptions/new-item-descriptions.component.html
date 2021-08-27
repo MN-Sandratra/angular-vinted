@@ -64,7 +64,7 @@
                     <mat-label>Indique l'état de ton article</mat-label>
                     <mat-select required [formControl]="etat">
                         <mat-option *ngFor="let etat of etats" value="{{etat.id}}">
-                            <h1>{{etat.designation}}</h1>
+                            {{etat.designation}}
                         </mat-option>
                     </mat-select>
                     <mat-error *ngIf="etat.invalid">{{getErrorMessage(etat)}}</mat-error>
@@ -79,7 +79,7 @@
             </div>
             <div class="w-50">
                 <mat-form-field appearance="legacy" floatLabel="never" class="w-100" [hideRequiredMarker]="true">
-                    <mat-label>0,00 €</mat-label>
+                    <mat-label>0,00 Ar</mat-label>
                     <input matInput required [formControl]="prix">
                     <mat-error *ngIf="prix.invalid">{{getErrorMessage(prix)}}</mat-error>
                 </mat-form-field>

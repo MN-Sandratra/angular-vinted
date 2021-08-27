@@ -46,6 +46,11 @@ import { CloneProposComponent } from './components/clone-propos/clone-propos.com
 import { CloneTopProposComponent } from './components/clone-top-propos/clone-top-propos.component';
 import { CloneContenuProposComponent } from './components/clone-contenu-propos/clone-contenu-propos.component';
 import { CloneBottomProposComponent } from './components/clone-bottom-propos/clone-bottom-propos.component';
+import { SeConnecterComponent } from './se-connecter/se-connecter.component';
+import { InscrireComponent } from './inscrire/inscrire.component';
+import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
+import { GraphQLModule } from './graphql.module';
+import { EncrDecrService } from './encr-decr-service.service';
 
 @NgModule({
   declarations: [
@@ -85,6 +90,8 @@ import { CloneBottomProposComponent } from './components/clone-bottom-propos/clo
     CloneTopProposComponent,
     CloneContenuProposComponent,
     CloneBottomProposComponent
+    SeConnecterComponent,
+    InscrireComponent,
   ],
   imports: [
     BrowserModule,
@@ -97,8 +104,37 @@ import { CloneBottomProposComponent } from './components/clone-bottom-propos/clo
     BrowserAnimationsModule,
     NgxPaginationModule,
     HttpClientModule
+    BrowserAnimationsModule,
+    MaterialModule,
+    SocialLoginModule,
+    FormsModule,
+    ReactiveFormsModule,
+    GraphQLModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide : 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin : false,
+        providers: [
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider(
+              '550907862929235'
+            )
+          },
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '780388224567-enp19pv4g9a3ipd2c9qq1sb9pp6avi94.apps.googleusercontent.com'
+            )
+          }
+        ]
+      } as SocialAuthServiceConfig,
+    },
+    EncrDecrService
+  ],
   bootstrap: [AppComponent]
   
 })

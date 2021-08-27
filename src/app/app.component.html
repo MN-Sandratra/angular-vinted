@@ -1,3 +1,175 @@
+<<<<<<< HEAD
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
+=======
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4  d-flex justalign-items-center">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Vinted</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown" *ngIf="isLoggedin === true">
+          <a class="nav-link dropdown-toggle" href="#" id="compte" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span>
+              <img src="{{ socialUser.photoUrl }}" class="rounded-circle" width="40" height="40">
+            </span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="compte">
+            <li class="dropdown-header muted" style="font-size: 13px;">{{socialUser.firstName}} {{socialUser.lastName}}
+            </li>
+            <li><a class="dropdown-item" href="#">Mon profil</a></li>
+            <li><a class="dropdown-item" href="#">Mes paramètres</a></li>
+            <li><a class="dropdown-item" href="#">Personnalisation</a></li>
+            <li><a class="dropdown-item" href="#">Mon porte-monnaie</a></li>
+            <li><a class="dropdown-item" href="#">Invite tes amis</a></li>
+            <li><a class="dropdown-item text-danger" href="#" (click)="logOut()">Se déconnecter</a></li>
+          </ul>
+        </li>
+        <li class="nav-item mt-2 mb-2">
+          <a type="button" class="nav-link"
+            style="color: #09aeb7;background-color: #fff;border-radius: 4px; border: 1px solid #09aeb7"
+            data-bs-toggle="modal" data-bs-target="#welcomeModal">
+            S'inscrire | Se connecter
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<button id="openModal" [hidden]="true" #openModal data-bs-toggle="modal" data-bs-target="#LiveModal">show</button>
+<!-- Modal Where do you live  -->
+<div class="modal fade" id="LiveModal" tabindex="-1" aria-labelledby="LiveModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="LiveModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="container-fluid">
+          <div class="row">
+            <h1 class="col-lg-12 mb-4">Where do you live ?</h1>
+            <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
+                src="/assets/images/login/austria.png" alt="" class="me-2" data-bs-dismiss="modal">
+              <span>Österreich</span>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
+                src="/assets/images/login/belgium.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>Belgique /
+                België</span>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
+                src="/assets/images/login/germany.png" alt="" class="me-2" data-bs-dismiss="modal">
+              <span>Deutschland</span>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
+                src="/assets/images/login/spain.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>España</span>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
+                src="/assets/images/login/france.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>France</span>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
+                src="/assets/images/login/italy.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>Italia</span>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
+                src="/assets/images/login/lithuania.png" alt="" class="me-2" data-bs-dismiss="modal">
+              <span>Lietuva</span>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
+                src="/assets/images/login/luxembourg.png" alt="" class="me-2" data-bs-dismiss="modal">
+              <span>Luxembourg</span>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
+                src="/assets/images/login/netherlands.png" alt="" class="me-2" data-bs-dismiss="modal">
+              <span>Nederland</span>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
+                src="/assets/images/login/portugal.png" alt="" class="me-2" data-bs-dismiss="modal">
+              <span>Portugal</span>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-space-between text-dark mb-4 align-items-center"><img
+                src="/assets/images/login/great_britain.png" alt="" class="me-2" data-bs-dismiss="modal"> <span>United
+                Kingdom</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Login -->
+<div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="welcomeModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="container-fluid">
+          <div class="row">
+            <h1 class="col-lg-12">Bienvenue !</h1>
+            <button type="button"
+              class="btn btn-outline-secondary col-lg-12 d-flex justify-content-center text-dark mb-2"
+              (click)="loginWithFacebook()" data-bs-dismiss="modal"><img src="/assets/images/login/fb.png" alt=""
+                class="me-2"> Continuer avec Facebook</button>
+            <button type="button"
+              class="btn btn-outline-secondary col-lg-12 d-flex justify-content-center text-dark mb-2"
+              (click)="loginWithGoogle()" data-bs-dismiss="modal"><img src="/assets/images/login/google.png"
+                class="me-2" alt=""> Continuer avec Google</button>
+            <div class="mt-2 text-gray">
+              <p>Ou connecte-toi avec <span class="lien-login" [routerLink]="['login']"
+                  routerLinkActive="router-link-active" data-bs-dismiss="modal">e-mail</span> </p>
+              <p>Tu n'as pas de compte Vinted ? <span class="lien-login" data-bs-toggle="modal"
+                  data-bs-target="#loginModal" data-bs-dismiss="modal">S'inscrire</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal SignUp -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="loginModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="container-fluid">
+          <div class="row">
+            <h1 class="col-lg-12">Rejoins le mouvement de la seconde main et vends sans frais !</h1>
+            <button type="button"
+              class="btn btn-outline-secondary col-lg-12 d-flex justify-content-center text-dark mb-2"><img
+                src="/assets/images/login/fb.png" alt="" class="me-2" data-bs-dismiss="modal"> Continuer avec Facebook
+            </button>
+            <button type="button"
+              class="btn btn-outline-secondary col-lg-12 d-flex justify-content-center text-dark mb-2"><img
+                src="/assets/images/login/google.png" class="me-2" alt="" data-bs-dismiss="modal"> Continuer avec
+              Google</button>
+            <div class="mt-2 text-gray">
+              <p>Ou inscris-toi avec <span class="lien-login" [routerLink]="['signup']"
+                  routerLinkActive="router-link-active" data-bs-dismiss="modal">E-mail</span> </p>
+              <p>Tu as déjà un compte ? <span class="lien-login" data-bs-toggle="modal" data-bs-target="#welcomeModal"
+                  data-bs-dismiss="modal">Se connecter</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+>>>>>>> origin/login

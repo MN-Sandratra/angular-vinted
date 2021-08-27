@@ -1,0 +1,35 @@
+<div class="container-fluid box-signin ms-auto me-auto">
+    <h1 class="text-center">S'inscrire</h1>
+    <form class="row" (ngSubmit)="onSubmit()" [formGroup]="myform">
+        <mat-form-field appearance="legacy" floatLabel="never" class="mb-3" [hideRequiredMarker]="true">
+            <mat-label>Nom d'utilisateur</mat-label>
+            <input matInput (focus)="hide_hint = !hide_hint" (blur)="hide_hint = !hide_hint" required
+                [formControl]="user">
+            <mat-hint [hidden]="hide_hint">Crée ton nom d'utilisateur en n'utilisant que des lettres et des chiffres.
+                Choisis-en un qui te plaît, tu ne pourras plus le changer.
+            </mat-hint>
+            <mat-error *ngIf="user.invalid">{{getUserMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="legacy" floatLabel="never" class="mb-3" [hideRequiredMarker]="true">
+            <mat-label>Email</mat-label>
+            <input matInput [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="legacy" floatLabel="never" class="mb-3" [hideRequiredMarker]="true">
+            <mat-label>Mot de passe</mat-label>
+            <input matInput minlength="7" [type]="hide ? 'password' : 'text'" required [formControl]="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="password.invalid">{{getPasswordError()}}</mat-error>
+        </mat-form-field>
+        <mat-checkbox color="primary" class="newsletter" [formControl]="news">S'inscrire à notre newsletter
+        </mat-checkbox>
+        <p class="text-gray mat-caption">En m'inscrivant, je confirme que j'ai accepté les <span
+                class="lien-terme">Termes & Conditions</span> de Vinted, avoir lu la <span class="lien-terme">Politique
+                de
+                Confidentialité</span>, et que j'ai plus de 18 ans.</p>
+        <button type="submit" class="btn btn-info sign">S'inscrire</button>
+    </form>
+</div>

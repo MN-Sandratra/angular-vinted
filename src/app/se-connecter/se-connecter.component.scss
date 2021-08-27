@@ -1,0 +1,47 @@
+::ng-deep .mat-focused .mat-form-field-label {
+  color: #999999 !important;
+}
+
+::ng-deep .mat-form-field-label {
+  color: #999999 !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  background-color: #ececec !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  background-color: #09aeb7 !important;
+}
+
+.box-signup {
+  width: 288px;
+}
+
+mat-icon,
+.text-gray {
+  color: #999999;
+}
+
+mat-checkbox ::ng-deep .mat-checkbox-inner-container {
+  width: 20px;
+  height: 20px;
+}
+
+::ng-deep .mat-checkbox-checked.mat-primary .mat-checkbox-background {
+  background-color: #09aeb7 !important;
+}
+
+.lien-terme {
+  color: #09aeb7;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn.sign {
+  color: #fff !important;
+  background-color: #09aeb7 !important;
+}

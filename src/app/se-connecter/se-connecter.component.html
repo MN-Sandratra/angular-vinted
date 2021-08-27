@@ -1,0 +1,23 @@
+<div class="container-fluid box-signup ms-auto me-auto text-center">
+    <h1 class="text-center">Se connecter</h1>
+    <form class="row" (ngSubmit)="onSubmit()" [formGroup]="myform">
+        <mat-form-field appearance="legacy" floatLabel="never" class="mb-3" [hideRequiredMarker]="true">
+            <mat-label>Identifiant ou adresse email</mat-label>
+            <input matInput required [formControl]="user">
+            <mat-error *ngIf="user.invalid">{{getErrorMessage(user)}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="legacy" floatLabel="never" class="mb-3" [hideRequiredMarker]="true">
+            <mat-label>Mot de passe</mat-label>
+            <input matInput minlength="7" [type]="hide ? 'password' : 'text'" required [formControl]="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="password.invalid">{{getErrorMessage(password)}}</mat-error>
+        </mat-form-field>
+
+        <button type="submit" class="btn btn-info sign">Se connecter</button>
+    </form>
+    <p class="lien-terme mt-3 mb-3">Mot de passe oublié</p>
+    <p class="lien-terme">Besoin d'aide ?</p>
+</div>

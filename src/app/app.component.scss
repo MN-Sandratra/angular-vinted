@@ -1,0 +1,25 @@
+.btn-outline-secondary:hover {
+  background: #f5f5f5;
+}
+
+.modal-dialog {
+  width: 400px;
+}
+
+.lien-login {
+  color: #09aeb7;
+  cursor: pointer;
+}
+
+.text-gray {
+  color: rgb(102, 102, 102);
+}
+.btn:focus,
+.btn-close:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#LiveModal .row > div {
+  cursor: pointer;
+}

@@ -1,5 +1,19 @@
 # AngularVinted
 
+# Membres
+
+Nom(s) et prénom(s)    | Filière
+:-------------        | :-------------
+RABENAIVO Dado Iarilala | ESIIA 5
+RANDRIAJAOSON Ando Lalaina Harry Michael | ESIIA 5
+RAZAKANIAINA Malala Hanta| IGGLIA 5
+MBELO NDRIAMANAMPY Sandratra | IMTICIA 5
+RASOLOARISON Ambinintsoa Michaël | IMTICIA 5
+
+
+Backend : [nodesjs-vinted](https://github.com/MN-Sandratra/nodejs-vinted)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
 ## Development server

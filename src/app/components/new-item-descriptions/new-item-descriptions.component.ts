@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Article } from 'src/app/services/article';
 import { ArticleService } from 'src/app/services/article.service';
 import marques from 'src/data/marque';
+import category from 'src/data/category';
 
 
 export interface Etat{
@@ -20,6 +21,7 @@ export interface Etat{
 export class NewItemDescriptionsComponent implements OnInit {
 
   public marques:string[]=[];
+  public categories:string[]=[];
   public etats:Etat[]=[];
   constructor(private article:ArticleService) { }
   designation = new FormControl('', Validators.required);
@@ -53,6 +55,7 @@ export class NewItemDescriptionsComponent implements OnInit {
 
   getAllArticle(){
     this.marques=marques;
+    this.categories=category;
   }
   AddArticle(){
     if(this.ArticleForm.valid){

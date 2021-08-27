@@ -28,7 +28,7 @@ mat-icon,
 //   display: none;
 // }
 
-mat-checkbox ::ng-deep .mat-checkbox-inner-container {
+::ng-deep .mat-checkbox .mat-checkbox-inner-container {
   width: 20px;
   height: 20px;
 }

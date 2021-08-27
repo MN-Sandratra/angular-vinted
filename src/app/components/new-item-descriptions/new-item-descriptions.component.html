@@ -1,20 +1,21 @@
 <div>
     <div class="w-100 bg-body border p-3 mt-4">
         <div class="p-2 d-flex flex-row justify-content-between border-bottom">
-           <div class="mt-3 w-50">
-                <p>Titre</p> 
+            <div class="mt-3 w-50">
+                <p>Titre</p>
             </div>
             <div class="w-50">
-                <mat-form-field appearance="legacy" floatLabel="never" class="w-100" [hideRequiredMarker]="true" color="primary">
+                <mat-form-field appearance="legacy" floatLabel="never" class="w-100" [hideRequiredMarker]="true"
+                    color="primary">
                     <mat-label>ex : Chemise Sézane verte</mat-label>
                     <input matInput required [formControl]="designation">
                     <mat-error *ngIf="designation.invalid">{{getErrorMessage(designation)}}</mat-error>
                 </mat-form-field>
-            </div>  
+            </div>
         </div>
         <div class="p-2 d-flex flex-row justify-content-between">
             <div class="mt-3 w-50">
-                <p>Décris ton article</p> 
+                <p>Décris ton article</p>
             </div>
             <div class="w-50">
                 <mat-form-field appearance="legacy" floatLabel="never" class="w-100" [hideRequiredMarker]="true">
@@ -22,78 +23,78 @@
                     <input matInput required [formControl]="description">
                     <mat-error *ngIf="description.invalid">{{getErrorMessage(description)}}</mat-error>
                 </mat-form-field>
-            </div>  
-         </div>
+            </div>
+        </div>
     </div>
     <div class="w-100 bg-body border p-3 mt-4">
         <div class="p-2 d-flex flex-row justify-content-between border-bottom">
-           <div class="mt-3 w-50">
-                <p>Catégorie</p> 
+            <div class="mt-3 w-50">
+                <p>Catégorie</p>
             </div>
             <div class="w-50">
                 <mat-form-field appearance="legacy" floatLabel="never" class="w-100" [hideRequiredMarker]="true">
                     <mat-label>Sélectionne une catégorie</mat-label>
                     <mat-select required [formControl]="Categorie">
-                        <mat-option value="1">One</mat-option>
-                        <mat-option value="2">Two</mat-option>
-                        <mat-option value="3">Three</mat-option>
-                    </mat-select> 
-                    <mat-error *ngIf="Categorie.invalid">{{getErrorMessage(Categorie)}}</mat-error>                 
+                        <mat-option *ngFor="let category of categories" value="marque">{{category}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="Categorie.invalid">{{getErrorMessage(Categorie)}}</mat-error>
                 </mat-form-field>
-            </div>  
+            </div>
         </div>
         <div class="p-2 d-flex flex-row justify-content-between border-bottom">
             <div class="mt-3 w-50">
-                 <p>Marque</p> 
-             </div>
-             <div class="w-50">
+                <p>Marque</p>
+            </div>
+            <div class="w-50">
                 <mat-form-field appearance="legacy" floatLabel="never" class="w-100" [hideRequiredMarker]="true">
                     <mat-label>Sélectionne la marque</mat-label>
                     <mat-select required [formControl]="marque">
                         <mat-option *ngFor="let marque of marques" value="marque">{{marque}}</mat-option>
-                    </mat-select> 
-                    <mat-error *ngIf="marque.invalid">{{getErrorMessage(marque)}}</mat-error>                 
+                    </mat-select>
+                    <mat-error *ngIf="marque.invalid">{{getErrorMessage(marque)}}</mat-error>
                 </mat-form-field>
-             </div>  
-         </div>
-         <div class="p-2 d-flex flex-row justify-content-between border-bottom">
+            </div>
+        </div>
+        <div class="p-2 d-flex flex-row justify-content-between border-bottom">
             <div class="mt-3 w-50">
-                 <p>Etat</p> 
-             </div>
-             <div class="w-50">
+                <p>Etat</p>
+            </div>
+            <div class="w-50">
                 <mat-form-field appearance="legacy" floatLabel="never" class="w-100" [hideRequiredMarker]="true">
                     <mat-label>Indique l'état de ton article</mat-label>
                     <mat-select required [formControl]="etat">
-                        <mat-option *ngFor="let etat of etats" value="{{etat.id}}"><h1>{{etat.designation}}</h1></mat-option>
-                    </mat-select> 
-                    <mat-error *ngIf="etat.invalid">{{getErrorMessage(etat)}}</mat-error>                 
+                        <mat-option *ngFor="let etat of etats" value="{{etat.id}}">
+                            <h1>{{etat.designation}}</h1>
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="etat.invalid">{{getErrorMessage(etat)}}</mat-error>
                 </mat-form-field>
-             </div>  
-         </div>
+            </div>
+        </div>
     </div>
     <div class="w-100 bg-body border p-3 mt-4">
         <div class="p-2 d-flex flex-row justify-content-between">
             <div class="mt-3 w-50">
-                 <p>Prix</p> 
+                <p>Prix</p>
             </div>
             <div class="w-50">
                 <mat-form-field appearance="legacy" floatLabel="never" class="w-100" [hideRequiredMarker]="true">
                     <mat-label>0,00 €</mat-label>
                     <input matInput required [formControl]="prix">
-                    <mat-error *ngIf="prix.invalid">{{getErrorMessage(prix)}}</mat-error> 
+                    <mat-error *ngIf="prix.invalid">{{getErrorMessage(prix)}}</mat-error>
                 </mat-form-field>
                 <div class="form-check mt-3">
                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                     <label class="form-check-label" for="defaultCheck1">
                         Je suis intéressé(e) par les échanges
                     </label>
-                 </div>
-            </div>  
-         </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="mt-5 d-flex flex-row-reverse">
         <div class="d-flex flex-row">
-            <div class="p-2" >
+            <div class="p-2">
                 <a class="button btnNotFull" href="#">Sauvegarder le brouillon</a>
             </div>
             <div class="p-2">
@@ -102,4 +103,3 @@
         </div>
     </div>
 </div>
-

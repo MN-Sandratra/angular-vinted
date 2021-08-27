@@ -1,4 +1,4 @@
-<div class="container-fluid box-signup ms-auto me-auto text-center">
+<div class="container-fluid box-signup ms-auto me-auto text-center" style="padding-top: 200px; margin-bottom: 90px;">
     <h1 class="text-center">Se connecter</h1>
     <form class="row" (ngSubmit)="onSubmit()" [formGroup]="myform">
         <mat-form-field appearance="legacy" floatLabel="never" class="mb-3" [hideRequiredMarker]="true">
@@ -9,7 +9,7 @@
         <mat-form-field appearance="legacy" floatLabel="never" class="mb-3" [hideRequiredMarker]="true">
             <mat-label>Mot de passe</mat-label>
             <input matInput minlength="7" [type]="hide ? 'password' : 'text'" required [formControl]="password">
-            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>

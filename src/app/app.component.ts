@@ -1,28 +1,30 @@
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthService, SocialUser } from 'angularx-social-login';
+import {
+  FacebookLoginProvider,
+  GoogleLoginProvider,
+  SocialAuthService,
+  SocialUser,
+} from 'angularx-social-login';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   loginForm: FormGroup = new FormGroup({});
   socialUser: SocialUser = new SocialUser();
   isLoggedin: boolean = false;
 
-  constructor(private socialAuthService: SocialAuthService) { 
-    
-  }
+  constructor(private socialAuthService: SocialAuthService) {}
 
-
-  ngOnInit(): void {    
-    var btn = document.getElementById("openModal");
-    btn?.click();
+  ngOnInit(): void {
+    // var btn = document.getElementById("openModal");
+    // btn?.click();
     this.socialAuthService.authState.subscribe((user) => {
       this.socialUser = user;
-      this.isLoggedin = (user != null);
+      this.isLoggedin = user != null;
     });
   }
 

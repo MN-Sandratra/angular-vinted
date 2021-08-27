@@ -89,7 +89,7 @@ import { EncrDecrService } from './encr-decr-service.service';
     CloneProposComponent,
     CloneTopProposComponent,
     CloneContenuProposComponent,
-    CloneBottomProposComponent
+    CloneBottomProposComponent,
     SeConnecterComponent,
     InscrireComponent,
   ],
@@ -103,7 +103,7 @@ import { EncrDecrService } from './encr-decr-service.service';
     MaterialModule,
     BrowserAnimationsModule,
     NgxPaginationModule,
-    HttpClientModule
+    HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
     SocialLoginModule,

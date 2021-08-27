@@ -1,0 +1,78 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="w-100 bg-body border p-3 mt-4">
+                PHOTO
+                <div class="p-2 d-flex flex-row justify-content-between">
+                    <div class="mt-3 w-50">
+                        <p>Adresse</p>
+                    </div>
+                    <div class="w-50">
+                        <mat-form-field appearance="legacy" floatLabel="never" class="w-100" [hideRequiredMarker]="true"
+                            color="primary">
+                            <mat-label>Ajoute ton adresse</mat-label>
+                            <input matInput required>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 bg-body border p-3 mt-4">
+                <div class="p-2 d-flex flex-row justify-content-between">
+                    <div class="mt-3 w-50">
+                        <p>Paiement</p>
+                    </div>
+                    <div class="w-50">
+                        <mat-form-field appearance="legacy" floatLabel="never" class="w-100" [hideRequiredMarker]="true"
+                            color="primary">
+                            <mat-label>Ajoute un mode de paiement</mat-label>
+                            <input matInput required>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 bg-body border p-3 mt-4">
+                <div class="p-2 d-flex flex-row justify-content-between">
+                    <div class="mt-3 w-50">
+                        <p>Envoi au point relais</p>
+                    </div>
+                    <div class="w-50">
+                        <mat-form-field appearance="legacy" floatLabel="never" class="w-100" [hideRequiredMarker]="true"
+                            color="primary">
+                            <mat-label>Ajoute un point relais</mat-label>
+                            <input matInput required>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-4 w-25">
+            <div class="w-100 bg-body border p-3 mt-4 text-gray">
+                <table class="w-100" [cellSpacing]="2" [cellPadding]="8">
+                    <tr>
+                        <td>Commande</td>
+                        <td>23,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Frais de Protection acheteurs</td>
+                        <td>1,85 €</td>
+                    </tr>
+                    <tr>
+                        <td>Frais de port</td>
+                        <td>3,51 €</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>28,36 €</td>
+                    </tr>
+                </table>
+                <button class="btn btn-info payer w-100 mt-2">Payer maintenant</button>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>

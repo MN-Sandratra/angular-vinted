@@ -1,32 +1,47 @@
 import { NgModule } from '@angular/core';
+
 import { CommonModule } from '@angular/common';
 
-import {MatButtonModule} from '@angular/material/button'; 
+import { MatButtonModule } from '@angular/material/button';
 
-import {MatFormFieldModule} from '@angular/material/form-field'; 
+import { MatIconModule } from '@angular/material/icon';
 
-import {MatIconModule} from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 
-import {MatCardModule} from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 
-import {MatInputModule} from '@angular/material/input'; 
+import { MatToolbarModule } from '@angular/material/toolbar';
 
-import {MatCheckboxModule} from '@angular/material/checkbox'; 
+import { MatCardModule } from '@angular/material/card';
+
+import { MatTooltipModule } from '@angular/material/tooltip';
+
+import { MatTabsModule } from '@angular/material/tabs';
+
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { MatSelectModule } from '@angular/material/select';
 
+import {MatDatepickerModule} from '@angular/material/datepicker'; 
+
+import {MatRadioModule} from '@angular/material/radio'; 
+
+import { MatSelectModule } from '@angular/material/select';
 
 const MaterialComponents = [
   MatButtonModule,
   MatIconModule,
-  MatFormFieldModule,
-  MatCardModule,
   MatInputModule,
-  MatCheckboxModule,
+  MatDividerModule,
+  MatToolbarModule,
+  MatCardModule,
+  MatTooltipModule,
+  MatTabsModule,
+  MatGridListModule,
   MatSnackBarModule,
-  MatSelectModule,
-  MatSnackBarModule
+  MatDatepickerModule,
+  MatRadioModule,
+  MatSelectModule
 ]
 
 @NgModule({

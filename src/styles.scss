@@ -1,106 +1,106 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-.button{
-    border-radius: 3%;
-    padding: 8px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-.btnFull{
-    background-color: #09B1BA;
-    color: white;
-    border: none;
-}
-.btnNotFull{
-    color: #09B1BA;
-    border: 0.5px solid #09B1BA;
-}
-.btnFull:hover{
-    background-color: #0ba0a8;
-    color: white;
-}
-.btnNotFull:hover{
-    color: #09B1BA;
-    border: 0.5px solid #09B1BA;
-    background-color: #0ba0a80e;
-}
-.link{
-    color:#09B1BA ;
-    text-decoration: none;
-}
-.link:hover{
-    color:#09B1BA ;
-    background-color: #0ba0a80e;
-}
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@ctrl/ngx-emoji-mart/picker";
+.button {
+  border-radius: 3%;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.btnFull {
+  background-color: #09b1ba;
+  color: white;
+  border: none;
+}
+.btnNotFull {
+  color: #09b1ba;
+  border: 0.5px solid #09b1ba;
+}
+.btnFull:hover {
+  background-color: #0ba0a8;
+  color: white;
+}
+.btnNotFull:hover {
+  color: #09b1ba;
+  border: 0.5px solid #09b1ba;
+  background-color: #0ba0a80e;
+}
+.link {
+  color: #09b1ba;
+  text-decoration: none;
+}
+.link:hover {
+  color: #09b1ba;
+  background-color: #0ba0a80e;
+}
 
 html,
 body {
   height: 100%;
+  background-color: #dedede;
 }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-.titredescriArticle{
-    font-size: 18px;
+.titredescriArticle {
+  font-size: 18px;
 }
-.descriArticle{
-    font-size: 12px;
-}
-
-::ng-deep .mat-input-wrapper{
-    height: 100px !important;
+.descriArticle {
+  font-size: 12px;
 }
 
+::ng-deep .mat-input-wrapper {
+  height: 100px !important;
+}
 
 .fond_top_about_it_works {
-    background-image: url(assets/images/fond_top_about_it_works1.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-shadow: white 0px 0px 2px;
-    font-size: 16px;
+  background-image: url(assets/images/fond_top_about_it_works1.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: white 0px 0px 2px;
+  font-size: 16px;
 }
 
 .size {
-    height: 500px;
+  height: 500px;
 }
 
 .pretbackground {
-    background-image: url(assets/images/pret1.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url(assets/images/pret1.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .contenu {
-    margin-left: 3%;
+  margin-left: 3%;
 }
 
 .imageVente {
-    width: 100%;
+  width: 100%;
 }
 
 .aboutimage {
-    background-image: url(assets/images/about.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-shadow: white 0px 0px 2px;
-    height: 730px;
-    width: 100%;
+  background-image: url(assets/images/about.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: white 0px 0px 2px;
+  height: 730px;
+  width: 100%;
 }
 
 .centered {
-    margin-top: -25%;
-    text-align: center;
+  margin-top: -25%;
+  text-align: center;
 }
 
 .centres {
-    text-align: center;
+  text-align: center;
 }
 
 .green-snackbar {
@@ -119,4 +119,8 @@ body {
   .mat-simple-snackbar-action {
     color: #571515 !important;
   }
+}
+
+.text-gray {
+  color: rgb(102, 102, 102);
 }

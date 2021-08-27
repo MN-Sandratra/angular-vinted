@@ -20,8 +20,6 @@ import { NewItemContentComponent } from './components/new-item-content/new-item-
 import { NewItemAddPhotosComponent } from './components/new-item-add-photos/new-item-add-photos.component';
 import { NewItemDescriptionsComponent } from './components/new-item-descriptions/new-item-descriptions.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { MaterialModule } from './material/material.module';
 import  {NgxPaginationModule}from 'ngx-pagination';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutHowItWorksComponent } from './components/about-how-it-works/about-how-it-works.component';
@@ -51,6 +49,12 @@ import { InscrireComponent } from './inscrire/inscrire.component';
 import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
 import { GraphQLModule } from './graphql.module';
 import { EncrDecrService } from './encr-decr-service.service';
+import { MaterialModule } from './material/material.module';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
+import { AchatComponent } from './achat/achat.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ChatComponent } from './chat/chat.component';
+import { PickerModule } from '@ctrl/ngx-emoji-mart';
 
 @NgModule({
   declarations: [
@@ -92,6 +96,9 @@ import { EncrDecrService } from './encr-decr-service.service';
     CloneBottomProposComponent,
     SeConnecterComponent,
     InscrireComponent,
+    ArticleDetailComponent,
+    AchatComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
@@ -110,7 +117,8 @@ import { EncrDecrService } from './encr-decr-service.service';
     FormsModule,
     ReactiveFormsModule,
     GraphQLModule,
-    HttpClientModule
+    HttpClientModule,
+    PickerModule
   ],
   providers: [
     {
@@ -133,7 +141,11 @@ import { EncrDecrService } from './encr-decr-service.service';
         ]
       } as SocialAuthServiceConfig,
     },
-    EncrDecrService
+    EncrDecrService,
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule,
+    PickerModule
   ],
   bootstrap: [AppComponent]
   

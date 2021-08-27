@@ -25,6 +25,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@ctrl/ngx-emoji-mart": "^6.0.0",
     "bootstrap": "^5.0.2",
     "ngx-pagination": "^5.1.1",
     "@apollo/client": "^3.0.0",

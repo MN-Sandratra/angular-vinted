@@ -1,0 +1,130 @@
+.card-wrapper {
+  position: relative;
+  margin: auto;
+  height: 500px;
+  max-width: 800px;
+  border-top-color: lawngreen;
+}
+
+.message-form {
+  width: 100%;
+}
+
+.message-info {
+  top: -12px;
+  margin-bottom: -10px;
+  & mat-icon {
+    font-size: 1.3rem;
+  }
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-left {
+  display: flex;
+  align-items: center;
+}
+
+.product-detail {
+  font-weight: 500;
+}
+
+.message-full-width {
+  width: 100%;
+}
+
+.message-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-message {
+  display: flex;
+  justify-content: space-between;
+  & > div {
+    font-weight: 500;
+  }
+}
+
+.stickers {
+  font-size: 1.75rem;
+  // margin-right: 10px;
+  color: #09b1ba;
+}
+
+.discussion {
+  max-height: 55vh;
+  width: 100%;
+  font-size: 15px;
+  overflow-y: scroll;
+
+  & .sender {
+    position: relative;
+    left: 0;
+    width: 50%;
+    padding: 15px;
+    text-align: start;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  & .receiver {
+    position: relative;
+    padding: 15px;
+    right: 0;
+    width: 50%;
+    // text-align: justify;
+    // border: 1px solid #09b1ba;
+    background-color: #09b1ba;
+    color: #fff;
+    border-radius: 5px;
+    // height: 100px;
+    margin-bottom: 20px;
+  }
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: #09b1ba !important;
+}
+
+::ng-deep .mat-form-field-label {
+  /*change color of label*/
+  color: #999999 !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: #ececec !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: #09b1ba !important;
+}
+
+// .example-container {
+//   width: 500px;
+//   height: 300px;
+//   border: 1px solid rgba(0, 0, 0, 0.5);
+// }
+
+// .example-sidenav-content {
+//   display: flex;
+//   height: 100%;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .example-sidenav {
+//   padding: 20px;
+// }
+
+::ng-deep .mat-card {
+  border-top: 3px solid #09b1ba !important;
+}

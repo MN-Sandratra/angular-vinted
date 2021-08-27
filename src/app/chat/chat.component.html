@@ -1,0 +1,84 @@
+<div class="container">
+    <mat-card class="card-wrapper">
+        <mat-card-header class="top-message">
+            <div class="vinted-color">Sefo</div>
+            <button mat-icon-button class="message-info">
+                <mat-icon>info_outlined</mat-icon>
+            </button>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+
+            <div class="product mt-1 mb-1">
+                <div class="product-left">
+                    <mat-icon class="d-block me-3">electric_scooter</mat-icon>
+                    <span class="product-detail">Trottinette électrique<br /> 100 €</span>
+                </div>
+                <div class="">
+                    <button mat-button
+                        style="color: #09b1ba;background-color: #fff;border-radius: 4px; border: 1px solid #09b1ba; font-size: small;"
+                        class="me-2">
+                        Faire une offre
+                    </button>
+                    <button mat-button
+                        style="color: #fff;background-color: #09b1ba;border-radius: 4px; border: 1px solid #09b1ba; font-size: small;">
+                        Acheter
+                    </button>
+                </div>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="discussion mt-3">
+                <div class="receiver ms-auto">
+                    Saika isera trottinette azafady. Miady varota ve sa tode "fixe fixe" ? 😁
+                </div>
+                <div class="sender me-auto">
+                    Okalo zoky fa makafoky ny bonbon voanjo 🥵, rapitso ny sera
+                </div>
+                <div class="receiver ms-auto">
+                    Saika isera trottinette azafady. Miady varota ve sa tode "fixe fixe" ? 😁
+                </div>
+
+            </div>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-footer class="message-container">
+            <button mat-icon-button (click)="isEmojiPickerVisible = !isEmojiPickerVisible;" matTooltip="Emoji"
+                matTooltipPosition="before" matTooltipShowDelay="200" matTooltipHideDelay="200" disableRipple>
+                <mat-icon class="stickers">sentiment_satisfied_alt</mat-icon>
+                <emoji-mart [style]="{ position: 'absolute', bottom: '60px', left: '50px' }" color="#09b1ba"
+                    [darkMode]='false' [showPreview]='false' class="" *ngIf="isEmojiPickerVisible"
+                    (emojiSelect)="addEmoji($event)" title="Choisi ton emoji" [i18n]="{ 
+                            search: 'Recherche',
+                            emojilist: 'Liste des emoji',
+                            notfound: 'Aucun emoji trouvé',
+                            clear: 'Effacer',
+                            categories: {
+                                search: 'Résultats de recherche',
+                                recent: 'Les plus populaires',
+                                people: 'Smileys et personnes',
+                                nature: 'Animals et nature',
+                                foods: 'Nouritures et boissons',
+                                activity: 'Activités',
+                                places: 'Voyages et lieux',
+                                objects: 'Objets',
+                                symbols: 'Symboles',
+                                flags: 'Drapeaux',
+                                custom: 'Custom'
+                            }
+                         }" set="facebook">
+                </emoji-mart>
+            </button>
+            <div class="message-form">
+                <mat-form-field class="message-full-width" appearance="standard" floatLabel="never">
+                    <mat-label>Saisir votre message</mat-label>
+                    <textarea matInput id="message" name="message" cdkTextareaAutosize cdkAutosizeMinRows="1"
+                        cdkAutosizeMaxRows="2" placeholder="" [(ngModel)]="message"></textarea>
+                </mat-form-field>
+            </div>
+            <button mat-icon-button (click)="onPost()" class="senders">
+                <mat-icon style="color: #09b1ba;">arrow_forward</mat-icon>
+            </button>
+        </mat-card-footer>
+    </mat-card>
+
+</div>

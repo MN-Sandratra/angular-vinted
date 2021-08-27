@@ -24,6 +24,28 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import  {NgxPaginationModule}from 'ngx-pagination';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutHowItWorksComponent } from './components/about-how-it-works/about-how-it-works.component';
+import { TopAboutHowItWorksComponent } from './components/top-about-how-it-works/top-about-how-it-works.component';
+import { VendreAboutHowItWorksComponent } from './components/vendre-about-how-it-works/vendre-about-how-it-works.component';
+import { AcheterAboutHowItWorksComponent } from './components/acheter-about-how-it-works/acheter-about-how-it-works.component';
+import { SecuriteAboutHowItWorksComponent } from './components/securite-about-how-it-works/securite-about-how-it-works.component';
+import { PretAboutHowItWorksComponent } from './components/pret-about-how-it-works/pret-about-how-it-works.component';
+import { BottomAboutHowItWorksComponent } from './components/bottom-about-how-it-works/bottom-about-how-it-works.component';
+import { FooterAboutHowItWorksComponent } from './components/footer-about-how-it-works/footer-about-how-it-works.component';
+import { ApplicationAboutItComponent } from './components/application-about-it/application-about-it.component';
+import { TopApplicationAboutItComponent } from './components/top-application-about-it/top-application-about-it.component';
+import { ToprightApplicationAboutItComponent } from './components/topright-application-about-it/topright-application-about-it.component';
+import { AboutComponent } from './components/about/about.component';
+import { TopAboutComponent } from './components/top-about/top-about.component';
+import { TopImageComponent } from './components/top-image/top-image.component';
+import { ContenuAboutComponent } from './components/contenu-about/contenu-about.component';
+import { EquipeAboutComponent } from './components/equipe-about/equipe-about.component';
+import { BottomAboutComponent } from './components/bottom-about/bottom-about.component';
+import { LogoBottomAboutComponent } from './components/logo-bottom-about/logo-bottom-about.component';
+import { CloneProposComponent } from './components/clone-propos/clone-propos.component';
+import { CloneTopProposComponent } from './components/clone-top-propos/clone-top-propos.component';
+import { CloneContenuProposComponent } from './components/clone-contenu-propos/clone-contenu-propos.component';
+import { CloneBottomProposComponent } from './components/clone-bottom-propos/clone-bottom-propos.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +63,28 @@ import { HttpClientModule } from '@angular/common/http';
     NewItemContentComponent,
     NewItemAddPhotosComponent,
     NewItemDescriptionsComponent,
-    
+    AboutHowItWorksComponent,
+    TopAboutHowItWorksComponent,
+    VendreAboutHowItWorksComponent,
+    AcheterAboutHowItWorksComponent,
+    SecuriteAboutHowItWorksComponent,
+    PretAboutHowItWorksComponent,
+    BottomAboutHowItWorksComponent,
+    FooterAboutHowItWorksComponent,
+    ApplicationAboutItComponent,
+    TopApplicationAboutItComponent,
+    ToprightApplicationAboutItComponent,
+    AboutComponent,
+    TopAboutComponent,
+    TopImageComponent,
+    ContenuAboutComponent,
+    EquipeAboutComponent,
+    BottomAboutComponent,
+    LogoBottomAboutComponent,
+    CloneProposComponent,
+    CloneTopProposComponent,
+    CloneContenuProposComponent,
+    CloneBottomProposComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +100,9 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
+
 export class AppModule { 
   constructor(library:FaIconLibrary){
     library.addIconPacks(fas,far);

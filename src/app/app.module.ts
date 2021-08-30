@@ -58,6 +58,8 @@ import { PickerModule } from '@ctrl/ngx-emoji-mart';
 import { FavorisComponent } from './favoris/favoris.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MessagesContentComponent } from './messages-content/messages-content.component';
+import { NewMessagesComponent } from './new-messages/new-messages.component';
+import { NewMessagesContentComponent } from './new-messages-content/new-messages-content.component';
 
 @NgModule({
   declarations: [
@@ -104,7 +106,9 @@ import { MessagesContentComponent } from './messages-content/messages-content.co
     ChatComponent,
     FavorisComponent,
     MessagesComponent,
-    MessagesContentComponent
+    MessagesContentComponent,
+    NewMessagesComponent,
+    NewMessagesContentComponent
   ],
   imports: [
     BrowserModule,

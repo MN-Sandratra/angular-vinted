@@ -14,6 +14,7 @@ import { ChatComponent } from './chat/chat.component';
 import { FavorisComponent } from './favoris/favoris.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MessagesContentComponent } from './messages-content/messages-content.component';
+import { NewMessagesContentComponent } from './new-messages-content/new-messages-content.component';
 
 const routes: Routes = [
   {path:'',component:MainContentComponent},
@@ -29,6 +30,8 @@ const routes: Routes = [
   { path: 'achat/:id', component: AchatComponent },
   { path: 'favourite_list', component: FavorisComponent},
   { path: 'inbox', component: MessagesContentComponent},
+  { path: 'new_messages', component: NewMessagesContentComponent},
+
 
 ]
 @NgModule({
@@ -37,4 +40,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents=[MainContentComponent,NewItemContentComponent,AboutHowItWorksComponent,ApplicationAboutItComponent,AboutComponent,CloneProposComponent, SeConnecterComponent, InscrireComponent, ArticleDetailComponent, ChatComponent,AchatComponent,FavorisComponent,MessagesContentComponent]
+export const routingComponents=[MainContentComponent,NewItemContentComponent,AboutHowItWorksComponent,ApplicationAboutItComponent,AboutComponent,CloneProposComponent, SeConnecterComponent, InscrireComponent, ArticleDetailComponent, ChatComponent,AchatComponent,FavorisComponent,MessagesContentComponent,NewMessagesContentComponent]

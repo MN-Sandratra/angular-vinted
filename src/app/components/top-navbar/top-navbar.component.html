@@ -39,15 +39,23 @@
                     <fa-icon [icon]="['far','envelope']" size="lg"></fa-icon>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown" id="#notif" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
                     <fa-icon [icon]="['far','bell']" size="lg"></fa-icon>
                 </a>
+                <div class="dropdown-menu shadow p-3 mb-5 bg-body rounded" id="notif" style="margin-left: -130px;">
+                    <img src="../../../assets/images/bell-notif.png" alt="">
+                   <div class="d-flex flex-column container text-center">
+                       <p >Tu n'as pas de notifications pour le moment</p>
+                       <p class="text-black-50">Retrouve ici tes notifications.</p>
+                   </div>
+                </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="#" >
                     <fa-icon [icon]="['far','heart']" size="lg"></fa-icon>
                 </a>
+               
             </li>
             <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="compte" role="button" data-bs-toggle="dropdown"

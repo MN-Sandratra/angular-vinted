@@ -55,6 +55,7 @@ import { AchatComponent } from './achat/achat.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChatComponent } from './chat/chat.component';
 import { PickerModule } from '@ctrl/ngx-emoji-mart';
+import { FavorisComponent } from './favoris/favoris.component';
 
 @NgModule({
   declarations: [
@@ -98,7 +99,8 @@ import { PickerModule } from '@ctrl/ngx-emoji-mart';
     InscrireComponent,
     ArticleDetailComponent,
     AchatComponent,
-    ChatComponent
+    ChatComponent,
+    FavorisComponent
   ],
   imports: [
     BrowserModule,

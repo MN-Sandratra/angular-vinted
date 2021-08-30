@@ -11,6 +11,7 @@ import { SeConnecterComponent } from './se-connecter/se-connecter.component';
 import { AchatComponent } from './achat/achat.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { ChatComponent } from './chat/chat.component';
+import { FavorisComponent } from './favoris/favoris.component';
 
 const routes: Routes = [
   {path:'',component:MainContentComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'article-detail/:id', component: ArticleDetailComponent },
   { path: 'chat/:id', component: ChatComponent }, 
   { path: 'achat/:id', component: AchatComponent },
+  { path: 'favourite_list', component: FavorisComponent},
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
@@ -31,4 +33,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents=[MainContentComponent,NewItemContentComponent,AboutHowItWorksComponent,ApplicationAboutItComponent,AboutComponent,CloneProposComponent, SeConnecterComponent, InscrireComponent, ArticleDetailComponent, ChatComponent,AchatComponent]
+export const routingComponents=[MainContentComponent,NewItemContentComponent,AboutHowItWorksComponent,ApplicationAboutItComponent,AboutComponent,CloneProposComponent, SeConnecterComponent, InscrireComponent, ArticleDetailComponent, ChatComponent,AchatComponent,FavorisComponent]

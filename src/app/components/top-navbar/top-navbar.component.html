@@ -35,7 +35,7 @@
         <div class="d-flex align-items-center">
 
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" [routerLink]="['/inbox']" routerLinkActive="true">
                     <fa-icon [icon]="['far','envelope']" size="lg"></fa-icon>
                 </a>
             </li>
@@ -52,7 +52,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/favourite_list']" routerLinkActive="true" favourite_list>
+                <a class="nav-link" [routerLink]="['/favourite_list']" routerLinkActive="true">
                     <fa-icon [icon]="['far','heart']" size="lg"></fa-icon>
                 </a>
                

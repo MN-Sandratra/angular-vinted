@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Article } from '../services/article';
+import { ArticleService } from '../services/article.service';
 
 @Component({
   selector: 'app-chat',
@@ -6,6 +9,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent implements OnInit {
+  
+  constructor(private route:ActivatedRoute,private api:ArticleService) { }
+  public id:String='';
+  public res=0;
+  selecteArticle:Article=new Article();
+
+  ngOnInit(): void {
+    this.id=this.route.snapshot.params.id;
+    this.getSelectedArticle();
+  }
+  getSelectedArticle(){
+    this.api.getArticleById(this.id).valueChanges.subscribe(
+      ({data,loading})=>{
+        this.selecteArticle=data.getArticleById
+      })
+  }
 
   public chat=[
     {
@@ -40,10 +59,4 @@ export class ChatComponent implements OnInit {
     }
     this.message = "";
   }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -10,11 +10,14 @@
         <mat-card-content>
 
             <div class="product mt-1 mb-1">
-                <div class="product-left">
-                    <mat-icon class="d-block me-3">electric_scooter</mat-icon>
-                    <span class="product-detail">Entana<br /> 20000Ar</span>
+                <div class="product-left me-4" *ngFor="let item of selecteArticle.image">
+                    <img src={{item.path}} alt="" style="width: 15%;">
+                    <div class="ms-2">
+                        <span class="product-detail d-block">{{selecteArticle.titre}}</span>
+                        <span class="product-detail d-block">{{selecteArticle.prix}} Ar</span>
+                    </div>
                 </div>
-                <div class="">
+                <div class="d-flex align-items-center">
                     <button mat-button
                         style="color: #09b1ba;background-color: #fff;border-radius: 4px; border: 1px solid #09b1ba; font-size: small;"
                         class="me-2">

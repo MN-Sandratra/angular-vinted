@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: "login", component: SeConnecterComponent}, 
   {path : "signup", component: InscrireComponent},
   { path: 'article-detail/:id', component: ArticleDetailComponent },
-  { path: 'chat', component: ChatComponent }, 
+  { path: 'chat/:id', component: ChatComponent }, 
   { path: 'achat/:id', component: AchatComponent },
 ]
 @NgModule({

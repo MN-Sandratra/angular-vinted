@@ -37,7 +37,7 @@
                 <h3>{{selecteArticle.titre}}</h3>
                 <p>{{selecteArticle.description}}
                 </p>
-                <button class="btn btn-info message w-100 mt-2 mb-2" [routerLink]="['/chat']">Envoyer un
+                <button class="btn btn-info message w-100 mt-2 mb-2" [routerLink]="['/chat',selecteArticle.id]">Envoyer un
                     message</button>
                 <button class="btn btn-info achat w-100"[routerLink]="['/achat',selecteArticle.id]">Acheter</button>
             </mat-card>

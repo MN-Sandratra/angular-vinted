@@ -28,14 +28,8 @@
             </div>
             <mat-divider></mat-divider>
             <div class="discussion mt-3">
-                <div class="receiver ms-auto">
-                    Saika isera entana azafady. Miady varota ve sa tode "fixe fixe" ? 😁
-                </div>
-                <div class="sender me-auto">
-                    Okalo zoky fa makafoky ny alina 🥵, rapitso ny sera
-                </div>
-                <div class="receiver ms-auto">
-                    Okay zoky be 😁
+                <div class="{{item.status}}" *ngFor="let item of chat">
+                    {{item.message}}
                 </div>
 
             </div>

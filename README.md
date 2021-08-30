@@ -2,7 +2,7 @@
 
 Clone de la plateforme Vinted [FRONTEND]
 
-Use **pre-prod** branch
+Switch to **pre-prod** branch and execute : **npm install**
 
 Vinted Clone BackEnd : [nodesjs-vinted](https://github.com/MN-Sandratra/nodejs-vinted)
 
@@ -10,11 +10,11 @@ Vinted Clone BackEnd : [nodesjs-vinted](https://github.com/MN-Sandratra/nodejs-v
 
 Nom(s) et prénom(s)    | Filière
 :-------------        | :-------------
-RABENAIVO Dado Iarilala | ESIIA 5
-RANDRIAJAOSON Ando Lalaina Harry Michael | ESIIA 5
-RAZAKANIAINA Malala Hanta| IGGLIA 5
-MBELO NDRIAMANAMPY Sandratra | IMTICIA 5
-RASOLOARISON Ambinintsoa Michaël | IMTICIA 5
+[RABENAIVO Dado Iarilala](https://github.com/DadoRabenaivo) | ESIIA 5
+[RANDRIAJAOSON Ando Lalaina Harry Michael](https://github.com/andolalaina) | ESIIA 5
+[RAZAKANIAINA Malala Hanta](https://github.com/MalalaHantaRazakaniaina) | IGGLIA 5
+[MBELO NDRIAMANAMPY Sandratra](https://github.com/MN-Sandratra) | IMTICIA 5
+[RASOLOARISON Ambinintsoa Michaël](https://github.com/RA-MICHAEL) | IMTICIA 5
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 

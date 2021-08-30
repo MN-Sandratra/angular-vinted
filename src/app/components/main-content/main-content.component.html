@@ -11,13 +11,13 @@
     <div class="mt-5">
         <h1>Rechercher par marque</h1>
         <app-content-section>
-            <app-search-tag *ngFor="let article of articles"></app-search-tag>
+            <app-search-tag *ngFor="let marque of Marques" [Marque]="marque"></app-search-tag>
         </app-content-section>
     </div>
     <div class="mt-5">
         <h1>Suggestions de recherche</h1>
         <app-content-section>
-            <app-search-tag *ngFor="let article of articles"></app-search-tag>
+            <app-search-tag *ngFor="let marque of Marques" [Marque]="marque"></app-search-tag>
         </app-content-section>
     </div>
     <div class="mt-5">

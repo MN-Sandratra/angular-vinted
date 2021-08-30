@@ -1,4 +1,5 @@
 export class Article {
+    id!:String;
     titre!:String;
     description!:String;
     marque!:String;

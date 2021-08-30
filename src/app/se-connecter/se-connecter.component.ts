@@ -43,6 +43,7 @@ export class SeConnecterComponent implements OnInit {
       let encrypted:string = this.EncrDecr.set('123456$#@$^@1ERF', this.password.value);
       let person:any = this.allUsers.find(user => (this.user.value === user.username || this.user.value === user.email) && (encrypted === user.password));
       
+      console.table(this.allUsers);
       if (person === undefined){
         this.openSnackBarError('Identifiant ou mot de passe invalide', 'Fermer');
       }
@@ -50,6 +51,7 @@ export class SeConnecterComponent implements OnInit {
         this.openSnackBar('Identifiants vérifiés avec succès', 'Fermer');
       }
       this.formReset(this.myform);
+      
     }
   }
   constructor(private snackBar: MatSnackBar, private EncrDecr: EncrDecrService, private apiUser: UserService) { }

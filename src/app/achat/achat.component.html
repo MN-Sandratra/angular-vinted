@@ -2,7 +2,15 @@
     <div class="row">
         <div class="col-lg-8">
             <div class="w-100 bg-body border p-3 mt-4">
-                PHOTO
+                <div class="row">
+                    <div class="col-lg-3" *ngFor="let item of selecteArticle.image">
+                        <img src={{item.path}} alt="" width="100%" >
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center">
+                        <h2>{{selecteArticle.titre}}</h2>
+                    </div>
+                </div>
+                
                 <div class="p-2 d-flex flex-row justify-content-between">
                     <div class="mt-3 w-50">
                         <p>Adresse</p>
@@ -51,19 +59,19 @@
                 <table class="w-100" [cellSpacing]="2" [cellPadding]="8">
                     <tr>
                         <td>Commande</td>
-                        <td>23,00 €</td>
+                        <td>{{selecteArticle.prix}} Ar</td>
                     </tr>
                     <tr>
                         <td>Frais de Protection acheteurs</td>
-                        <td>1,85 €</td>
+                        <td>1 000 Ar</td>
                     </tr>
                     <tr>
                         <td>Frais de port</td>
-                        <td>3,51 €</td>
+                        <td>3 000 Ar</td>
                     </tr>
                     <tr>
                         <td>Total</td>
-                        <td>28,36 €</td>
+                        <td>{{res}} Ar</td>
                     </tr>
                 </table>
                 <button class="btn btn-info payer w-100 mt-2">Payer maintenant</button>

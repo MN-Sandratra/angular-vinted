@@ -23,7 +23,7 @@ const routes: Routes = [
   {path : "signup", component: InscrireComponent},
   { path: 'article-detail/:id', component: ArticleDetailComponent },
   { path: 'chat', component: ChatComponent }, 
-  { path: 'achat', component: AchatComponent },
+  { path: 'achat/:id', component: AchatComponent },
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

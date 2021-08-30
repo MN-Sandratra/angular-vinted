@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-search-tag',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchTagComponent implements OnInit {
 
+  public vue="";
+  @Input() Marque!:any;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.vue=(Math.random()*10).toPrecision(2);
   }
 
 }
